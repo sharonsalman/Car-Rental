@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Project_OOP
 {
-    public partial class Form1 : Form
+    public partial class SportCar : Form
     {
-        public Form1()
+        public SportCar()
         {
             InitializeComponent();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
