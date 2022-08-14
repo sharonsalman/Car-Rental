@@ -21,20 +21,33 @@ namespace Project_OOP
         {
 
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void VehicleType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (VehicleType.SelectedItem.ToString().Equals("Cars")) 
+            {
+                CarType.Enabled = true;
+            }
+            else
+            {
+                CarType.Enabled = false;
+            }
         }
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void CarType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CarType.SelectedItem.ToString().Equals("Family"))
+
+        }
+
+        private void VehicleName_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
-
-     
     }
 }

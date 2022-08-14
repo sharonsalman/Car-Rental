@@ -30,14 +30,14 @@ namespace Project_OOP
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FamilyCar));
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RentalPriceText = new System.Windows.Forms.TextBox();
+            this.SeatsText = new System.Windows.Forms.TextBox();
+            this.DistanceText = new System.Windows.Forms.TextBox();
+            this.SafetyText = new System.Windows.Forms.TextBox();
+            this.ColorText = new System.Windows.Forms.TextBox();
+            this.YearText = new System.Windows.Forms.TextBox();
+            this.ModelText = new System.Windows.Forms.TextBox();
+            this.CompanyText = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,70 +46,71 @@ namespace Project_OOP
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.KidsSeat = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.HowManySeats = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.DoorsText = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox8
+            // RentalPriceText
             // 
-            this.textBox8.Location = new System.Drawing.Point(232, 385);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 34;
+            this.RentalPriceText.Location = new System.Drawing.Point(232, 385);
+            this.RentalPriceText.Name = "RentalPriceText";
+            this.RentalPriceText.Size = new System.Drawing.Size(100, 20);
+            this.RentalPriceText.TabIndex = 34;
             // 
-            // textBox7
+            // SeatsText
             // 
-            this.textBox7.Location = new System.Drawing.Point(117, 233);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 33;
+            this.SeatsText.Location = new System.Drawing.Point(117, 233);
+            this.SeatsText.Name = "SeatsText";
+            this.SeatsText.Size = new System.Drawing.Size(100, 20);
+            this.SeatsText.TabIndex = 33;
             // 
-            // textBox6
+            // DistanceText
             // 
-            this.textBox6.Location = new System.Drawing.Point(117, 202);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 32;
+            this.DistanceText.Location = new System.Drawing.Point(117, 202);
+            this.DistanceText.Name = "DistanceText";
+            this.DistanceText.Size = new System.Drawing.Size(100, 20);
+            this.DistanceText.TabIndex = 32;
             // 
-            // textBox5
+            // SafetyText
             // 
-            this.textBox5.Location = new System.Drawing.Point(117, 172);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 31;
+            this.SafetyText.Location = new System.Drawing.Point(117, 172);
+            this.SafetyText.Name = "SafetyText";
+            this.SafetyText.Size = new System.Drawing.Size(100, 20);
+            this.SafetyText.TabIndex = 31;
             // 
-            // textBox4
+            // ColorText
             // 
-            this.textBox4.Location = new System.Drawing.Point(117, 140);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 30;
+            this.ColorText.Location = new System.Drawing.Point(117, 140);
+            this.ColorText.Name = "ColorText";
+            this.ColorText.Size = new System.Drawing.Size(100, 20);
+            this.ColorText.TabIndex = 30;
             // 
-            // textBox3
+            // YearText
             // 
-            this.textBox3.Location = new System.Drawing.Point(117, 105);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 29;
+            this.YearText.Location = new System.Drawing.Point(117, 105);
+            this.YearText.Name = "YearText";
+            this.YearText.Size = new System.Drawing.Size(100, 20);
+            this.YearText.TabIndex = 29;
             // 
-            // textBox2
+            // ModelText
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 28;
+            this.ModelText.Location = new System.Drawing.Point(117, 74);
+            this.ModelText.Name = "ModelText";
+            this.ModelText.Size = new System.Drawing.Size(100, 20);
+            this.ModelText.TabIndex = 28;
             // 
-            // textBox1
+            // CompanyText
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 27;
+            this.CompanyText.Location = new System.Drawing.Point(117, 41);
+            this.CompanyText.Name = "CompanyText";
+            this.CompanyText.Size = new System.Drawing.Size(100, 20);
+            this.CompanyText.TabIndex = 27;
+            this.CompanyText.TextChanged += new System.EventHandler(this.CompanyText_TextChanged);
             // 
             // label8
             // 
@@ -183,17 +184,17 @@ namespace Project_OOP
             this.label1.TabIndex = 19;
             this.label1.Text = "Model:";
             // 
-            // radioButton1
+            // KidsSeat
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(41, 310);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 17);
-            this.radioButton1.TabIndex = 35;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Kids Seat";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.KidsSeat.AutoSize = true;
+            this.KidsSeat.Location = new System.Drawing.Point(41, 310);
+            this.KidsSeat.Name = "KidsSeat";
+            this.KidsSeat.Size = new System.Drawing.Size(70, 17);
+            this.KidsSeat.TabIndex = 35;
+            this.KidsSeat.TabStop = true;
+            this.KidsSeat.Text = "Kids Seat";
+            this.KidsSeat.UseVisualStyleBackColor = true;
+            this.KidsSeat.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label9
             // 
@@ -205,19 +206,20 @@ namespace Project_OOP
             this.label9.Text = "How much?";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // comboBox1
+            // HowManySeats
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.HowManySeats.Enabled = false;
+            this.HowManySeats.FormattingEnabled = true;
+            this.HowManySeats.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.comboBox1.Location = new System.Drawing.Point(223, 304);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 38;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.HowManySeats.Location = new System.Drawing.Point(223, 304);
+            this.HowManySeats.Name = "HowManySeats";
+            this.HowManySeats.Size = new System.Drawing.Size(121, 21);
+            this.HowManySeats.TabIndex = 38;
+            this.HowManySeats.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -229,12 +231,12 @@ namespace Project_OOP
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox9
+            // DoorsText
             // 
-            this.textBox9.Location = new System.Drawing.Point(118, 269);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 41;
+            this.DoorsText.Location = new System.Drawing.Point(118, 269);
+            this.DoorsText.Name = "DoorsText";
+            this.DoorsText.Size = new System.Drawing.Size(100, 20);
+            this.DoorsText.TabIndex = 41;
             // 
             // label10
             // 
@@ -250,20 +252,20 @@ namespace Project_OOP
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.DoorsText);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.HowManySeats);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.KidsSeat);
+            this.Controls.Add(this.RentalPriceText);
+            this.Controls.Add(this.SeatsText);
+            this.Controls.Add(this.DistanceText);
+            this.Controls.Add(this.SafetyText);
+            this.Controls.Add(this.ColorText);
+            this.Controls.Add(this.YearText);
+            this.Controls.Add(this.ModelText);
+            this.Controls.Add(this.CompanyText);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -282,14 +284,14 @@ namespace Project_OOP
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox RentalPriceText;
+        private System.Windows.Forms.TextBox SeatsText;
+        private System.Windows.Forms.TextBox DistanceText;
+        private System.Windows.Forms.TextBox SafetyText;
+        private System.Windows.Forms.TextBox ColorText;
+        private System.Windows.Forms.TextBox YearText;
+        private System.Windows.Forms.TextBox ModelText;
+        private System.Windows.Forms.TextBox CompanyText;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -298,11 +300,11 @@ namespace Project_OOP
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton KidsSeat;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox HowManySeats;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox DoorsText;
         private System.Windows.Forms.Label label10;
     }
 }

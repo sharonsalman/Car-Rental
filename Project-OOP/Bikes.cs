@@ -19,8 +19,8 @@ namespace Project_OOP
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-        
-    }
+
+        }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -37,3 +37,4 @@ namespace Project_OOP
 
         }
     }
+ }

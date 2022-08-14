@@ -31,5 +31,10 @@ namespace Project_OOP
         {
 
         }
+
+        private void CompanyText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

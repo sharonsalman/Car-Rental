@@ -24,7 +24,7 @@ namespace Project_OOP
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           Text = FerariF488.Company;
+           
         }
     }
 }
