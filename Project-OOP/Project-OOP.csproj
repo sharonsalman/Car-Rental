@@ -54,6 +54,18 @@
     </Compile>
     <Compile Include="BikesClass.cs" />
     <Compile Include="CarsClass.cs" />
+    <Compile Include="FamilyCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyCar.Designer.cs">
+      <DependentUpon>FamilyCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SportCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SportCar.Designer.cs">
+      <DependentUpon>SportCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="VehicleClass.cs" />
     <Compile Include="Vehicles.cs">
       <SubType>Form</SubType>
@@ -65,6 +77,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bikes.resx">
       <DependentUpon>Bikes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamilyCar.resx">
+      <DependentUpon>FamilyCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SportCar.resx">
+      <DependentUpon>SportCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicles.resx">
       <DependentUpon>Vehicles.cs</DependentUpon>

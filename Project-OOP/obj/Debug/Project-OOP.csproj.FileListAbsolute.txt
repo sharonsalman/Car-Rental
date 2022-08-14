@@ -9,3 +9,5 @@ C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\bin\Debug\Project-
 C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\bin\Debug\Project-OOP.pdb
 C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\obj\Debug\Project-OOP.exe
 C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\obj\Debug\Project-OOP.pdb
+C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\obj\Debug\Project_OOP.FamilyCar.resources
+C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\obj\Debug\Project_OOP.SportCar.resources
