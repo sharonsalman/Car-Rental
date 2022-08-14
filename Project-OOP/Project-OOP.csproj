@@ -60,12 +60,14 @@
     <Compile Include="FamilyCar.Designer.cs">
       <DependentUpon>FamilyCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FamilyCarsClass.cs" />
     <Compile Include="SportCar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SportCar.Designer.cs">
       <DependentUpon>SportCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="SportsCarsClass.cs" />
     <Compile Include="VehicleClass.cs" />
     <Compile Include="Vehicles.cs">
       <SubType>Form</SubType>

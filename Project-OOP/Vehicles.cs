@@ -42,10 +42,16 @@ namespace Project_OOP
 
         private void VehicleName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string[] arr = new string[10];
+            int i = 0 ;
+            for (i = 0; i < 10; i++)
+            {
+                VehicleName.Items.Add(Arr[i]);
+            }
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+            private void label2_Click(object sender, EventArgs e)
         {
 
         }
