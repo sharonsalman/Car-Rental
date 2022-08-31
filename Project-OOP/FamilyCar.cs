@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Project_OOP
 {
+    //פונקציה שמקשרת את הCLASS לפה
     public partial class FamilyCar : Form
     {
         public FamilyCar()
@@ -22,9 +22,12 @@ namespace Project_OOP
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+          /*  if (RadioButton1.Checked == true){ 
+                this.Price = this.Price + 50;
+            }
+          */
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,6 +36,16 @@ namespace Project_OOP
         }
 
         private void CompanyText_TextChanged(object sender, EventArgs e)
+        {
+            //f.Company;
+        }
+
+        private void FamilyCar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RentalPriceText_TextChanged(object sender, EventArgs e)
         {
 
         }

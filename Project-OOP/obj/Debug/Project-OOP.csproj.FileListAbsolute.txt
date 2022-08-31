@@ -11,3 +11,13 @@ C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\obj\Debug\Project-
 C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\obj\Debug\Project-OOP.pdb
 C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\obj\Debug\Project_OOP.FamilyCar.resources
 C:\Users\heli\Source\Repos\מונחה\Project-OOP\Project-OOP\obj\Debug\Project_OOP.SportCar.resources
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project-OOP.csproj.AssemblyReference.cache
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project_OOP.Bikes.resources
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project_OOP.FamilyCar.resources
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project_OOP.SportCar.resources
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project_OOP.Vehicles.resources
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project_OOP.Properties.Resources.resources
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project-OOP.csproj.GenerateResource.cache
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project-OOP.csproj.CoreCompileInputs.cache
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project-OOP.exe
+C:\Users\Sharon\Desktop\לימודים\מונחה עצמים\Project\Project-OOP\obj\Debug\Project-OOP.pdb

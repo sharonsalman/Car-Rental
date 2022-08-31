@@ -46,6 +46,7 @@ namespace Project_OOP
             this.label1.Size = new System.Drawing.Size(155, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "סוג הרכב אותו תרצו להשכיר";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

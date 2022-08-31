@@ -61,6 +61,7 @@
       <DependentUpon>FamilyCar.cs</DependentUpon>
     </Compile>
     <Compile Include="FamilyCarsClass.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="SportCar.cs">
       <SubType>Form</SubType>
     </Compile>

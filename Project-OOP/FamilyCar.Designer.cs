@@ -61,6 +61,7 @@ namespace Project_OOP
             this.RentalPriceText.Name = "RentalPriceText";
             this.RentalPriceText.Size = new System.Drawing.Size(100, 20);
             this.RentalPriceText.TabIndex = 34;
+            this.RentalPriceText.TextChanged += new System.EventHandler(this.RentalPriceText_TextChanged);
             // 
             // SeatsText
             // 
@@ -106,6 +107,7 @@ namespace Project_OOP
             // 
             // CompanyText
             // 
+            this.CompanyText.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CompanyText.Location = new System.Drawing.Point(117, 41);
             this.CompanyText.Name = "CompanyText";
             this.CompanyText.Size = new System.Drawing.Size(100, 20);
@@ -194,7 +196,7 @@ namespace Project_OOP
             this.KidsSeat.TabStop = true;
             this.KidsSeat.Text = "Kids Seat";
             this.KidsSeat.UseVisualStyleBackColor = true;
-            this.KidsSeat.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.KidsSeat.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // label9
             // 
@@ -276,6 +278,7 @@ namespace Project_OOP
             this.Controls.Add(this.label1);
             this.Name = "FamilyCar";
             this.Text = "FamilyCar";
+            this.Load += new System.EventHandler(this.FamilyCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
