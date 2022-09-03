@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Project_OOP
 {
 
-    class VehicleClass
+   abstract class VehicleClass
     {
         private int Year;
         private int Distance;

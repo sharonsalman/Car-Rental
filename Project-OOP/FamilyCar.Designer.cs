@@ -149,6 +149,7 @@ namespace Project_OOP
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 23;
             this.label5.Text = "Company:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -213,6 +214,7 @@ namespace Project_OOP
             this.HowManySeats.Enabled = false;
             this.HowManySeats.FormattingEnabled = true;
             this.HowManySeats.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
