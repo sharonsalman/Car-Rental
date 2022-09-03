@@ -69,6 +69,12 @@
     </Compile>
     <Compile Include="BikesClass.cs" />
     <Compile Include="CarsClass.cs" />
+    <Compile Include="CreateVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateVehicles.Designer.cs">
+      <DependentUpon>CreateVehicles.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseDataOOP.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bikes.resx">
       <DependentUpon>Bikes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateVehicles.resx">
+      <DependentUpon>CreateVehicles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FamilyCar.resx">
       <DependentUpon>FamilyCar.cs</DependentUpon>

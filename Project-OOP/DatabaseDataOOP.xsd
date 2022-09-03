@@ -136,7 +136,7 @@ SELECT Id, LicensePlate, VehicleName, Color, CompanyName, Price, Safety, Distanc
   <xs:element name="DatabaseDataOOP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DatabaseDataOOP" msprop:Generator_UserDSName="DatabaseDataOOP">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_TablePropName="Table" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_UserTableName="Table" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowClassName="TableRow">
+        <xs:element name="Table" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_TablePropName="Table" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowClassName="TableRow" msprop:Generator_UserTableName="Table" msprop:Generator_RowEvArgName="TableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -184,6 +184,9 @@ SELECT Id, LicensePlate, VehicleName, Color, CompanyName, Price, Safety, Distanc
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="KidSeat" msprop:Generator_ColumnVarNameInTable="columnKidSeat" msprop:Generator_ColumnPropNameInRow="KidSeat" msprop:Generator_ColumnPropNameInTable="KidSeatColumn" msprop:Generator_UserColumnName="KidSeat" type="xs:string" minOccurs="0" />
+              <xs:element name="KidSeatHowMuch" msprop:Generator_ColumnVarNameInTable="columnKidSeatHowMuch" msprop:Generator_ColumnPropNameInRow="KidSeatHowMuch" msprop:Generator_ColumnPropNameInTable="KidSeatHowMuchColumn" msprop:Generator_UserColumnName="KidSeatHowMuch" type="xs:string" minOccurs="0" />
+              <xs:element name="Image" msprop:Generator_ColumnVarNameInTable="columnImage" msprop:Generator_ColumnPropNameInRow="Image" msprop:Generator_ColumnPropNameInTable="ImageColumn" msprop:Generator_UserColumnName="Image" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

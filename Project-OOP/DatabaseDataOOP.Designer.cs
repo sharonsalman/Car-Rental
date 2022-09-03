@@ -309,6 +309,12 @@ namespace Project_OOP {
             
             private global::System.Data.DataColumn columnType;
             
+            private global::System.Data.DataColumn columnKidSeat;
+            
+            private global::System.Data.DataColumn columnKidSeatHowMuch;
+            
+            private global::System.Data.DataColumn columnImage;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public TableDataTable() {
@@ -464,6 +470,30 @@ namespace Project_OOP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn KidSeatColumn {
+                get {
+                    return this.columnKidSeat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn KidSeatHowMuchColumn {
+                get {
+                    return this.columnKidSeatHowMuch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ImageColumn {
+                get {
+                    return this.columnImage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -499,7 +529,25 @@ namespace Project_OOP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableRow AddTableRow(int Id, string LicensePlate, string VehicleName, string Color, string CompanyName, int Price, int Safety, int Distance, int Year, int Doors, int Seats, int Storage, int MaxSpeed, int FuelPerKM, string Type) {
+            public TableRow AddTableRow(
+                        int Id, 
+                        string LicensePlate, 
+                        string VehicleName, 
+                        string Color, 
+                        string CompanyName, 
+                        int Price, 
+                        int Safety, 
+                        int Distance, 
+                        int Year, 
+                        int Doors, 
+                        int Seats, 
+                        int Storage, 
+                        int MaxSpeed, 
+                        int FuelPerKM, 
+                        string Type, 
+                        string KidSeat, 
+                        string KidSeatHowMuch, 
+                        string Image) {
                 TableRow rowTableRow = ((TableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -516,7 +564,10 @@ namespace Project_OOP {
                         Storage,
                         MaxSpeed,
                         FuelPerKM,
-                        Type};
+                        Type,
+                        KidSeat,
+                        KidSeatHowMuch,
+                        Image};
                 rowTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTableRow);
                 return rowTableRow;
@@ -561,6 +612,9 @@ namespace Project_OOP {
                 this.columnMaxSpeed = base.Columns["MaxSpeed"];
                 this.columnFuelPerKM = base.Columns["FuelPerKM"];
                 this.columnType = base.Columns["Type"];
+                this.columnKidSeat = base.Columns["KidSeat"];
+                this.columnKidSeatHowMuch = base.Columns["KidSeatHowMuch"];
+                this.columnImage = base.Columns["Image"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -596,6 +650,12 @@ namespace Project_OOP {
                 base.Columns.Add(this.columnFuelPerKM);
                 this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnType);
+                this.columnKidSeat = new global::System.Data.DataColumn("KidSeat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKidSeat);
+                this.columnKidSeatHowMuch = new global::System.Data.DataColumn("KidSeatHowMuch", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKidSeatHowMuch);
+                this.columnImage = new global::System.Data.DataColumn("Image", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImage);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
@@ -953,6 +1013,54 @@ namespace Project_OOP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string KidSeat {
+                get {
+                    try {
+                        return ((string)(this[this.tableTable.KidSeatColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KidSeat\' in table \'Table\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTable.KidSeatColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string KidSeatHowMuch {
+                get {
+                    try {
+                        return ((string)(this[this.tableTable.KidSeatHowMuchColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KidSeatHowMuch\' in table \'Table\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTable.KidSeatHowMuchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Image {
+                get {
+                    try {
+                        return ((string)(this[this.tableTable.ImageColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Image\' in table \'Table\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTable.ImageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDoorsNull() {
                 return this.IsNull(this.tableTable.DoorsColumn);
             }
@@ -1009,6 +1117,42 @@ namespace Project_OOP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFuelPerKMNull() {
                 this[this.tableTable.FuelPerKMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsKidSeatNull() {
+                return this.IsNull(this.tableTable.KidSeatColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetKidSeatNull() {
+                this[this.tableTable.KidSeatColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsKidSeatHowMuchNull() {
+                return this.IsNull(this.tableTable.KidSeatHowMuchColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetKidSeatHowMuchNull() {
+                this[this.tableTable.KidSeatHowMuchColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsImageNull() {
+                return this.IsNull(this.tableTable.ImageColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetImageNull() {
+                this[this.tableTable.ImageColumn] = global::System.Convert.DBNull;
             }
         }
         
