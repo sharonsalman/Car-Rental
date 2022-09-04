@@ -36,6 +36,7 @@ namespace Project_OOP
             this.VehicleType = new System.Windows.Forms.ComboBox();
             this.CarType = new System.Windows.Forms.ComboBox();
             this.VehicleName = new System.Windows.Forms.ComboBox();
+            this.AddVehicle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -105,11 +106,22 @@ namespace Project_OOP
             this.VehicleName.TabIndex = 10;
             this.VehicleName.SelectedIndexChanged += new System.EventHandler(this.VehicleName_SelectedIndexChanged);
             // 
+            // AddVehicle
+            // 
+            this.AddVehicle.Location = new System.Drawing.Point(672, 390);
+            this.AddVehicle.Name = "AddVehicle";
+            this.AddVehicle.Size = new System.Drawing.Size(116, 48);
+            this.AddVehicle.TabIndex = 11;
+            this.AddVehicle.Text = "הוספת רכב";
+            this.AddVehicle.UseVisualStyleBackColor = true;
+            this.AddVehicle.Click += new System.EventHandler(this.AddVehicle_Click);
+            // 
             // Vehicles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AddVehicle);
             this.Controls.Add(this.VehicleName);
             this.Controls.Add(this.CarType);
             this.Controls.Add(this.VehicleType);
@@ -131,6 +143,7 @@ namespace Project_OOP
         private System.Windows.Forms.ComboBox VehicleType;
         private System.Windows.Forms.ComboBox CarType;
         private System.Windows.Forms.ComboBox VehicleName;
+        private System.Windows.Forms.Button AddVehicle;
     }
 }
 

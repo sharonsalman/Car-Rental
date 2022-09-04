@@ -34,3 +34,10 @@ C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project-OOP.csproj.CoreCompileInputs.cache
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project-OOP.exe
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project-OOP.pdb
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\Database.mdf
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\Database_log.ldf
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\EntityFramework.dll
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\EntityFramework.xml
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.CreateVehicles.resources

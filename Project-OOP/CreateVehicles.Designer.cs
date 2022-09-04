@@ -43,8 +43,8 @@ namespace Project_OOP
             System.Windows.Forms.Label priceLabel;
             System.Windows.Forms.Label fuelPerKMLabel;
             System.Windows.Forms.Label maxSpeedLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateVehicles));
             System.Windows.Forms.Label imageLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateVehicles));
             this.storageTextBox = new System.Windows.Forms.TextBox();
             this.seatsTextBox = new System.Windows.Forms.TextBox();
             this.doorsTextBox = new System.Windows.Forms.TextBox();
@@ -76,6 +76,9 @@ namespace Project_OOP
             this.fuelPerKMTextBox = new System.Windows.Forms.TextBox();
             this.maxSpeedTextBox = new System.Windows.Forms.TextBox();
             this.imagePictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             storageLabel = new System.Windows.Forms.Label();
             seatsLabel = new System.Windows.Forms.Label();
             doorsLabel = new System.Windows.Forms.Label();
@@ -100,7 +103,7 @@ namespace Project_OOP
             // storageLabel
             // 
             storageLabel.AutoSize = true;
-            storageLabel.Location = new System.Drawing.Point(15, 321);
+            storageLabel.Location = new System.Drawing.Point(261, 153);
             storageLabel.Name = "storageLabel";
             storageLabel.Size = new System.Drawing.Size(47, 13);
             storageLabel.TabIndex = 67;
@@ -109,7 +112,7 @@ namespace Project_OOP
             // seatsLabel
             // 
             seatsLabel.AutoSize = true;
-            seatsLabel.Location = new System.Drawing.Point(15, 291);
+            seatsLabel.Location = new System.Drawing.Point(261, 123);
             seatsLabel.Name = "seatsLabel";
             seatsLabel.Size = new System.Drawing.Size(37, 13);
             seatsLabel.TabIndex = 64;
@@ -118,7 +121,7 @@ namespace Project_OOP
             // doorsLabel
             // 
             doorsLabel.AutoSize = true;
-            doorsLabel.Location = new System.Drawing.Point(14, 262);
+            doorsLabel.Location = new System.Drawing.Point(260, 94);
             doorsLabel.Name = "doorsLabel";
             doorsLabel.Size = new System.Drawing.Size(38, 13);
             doorsLabel.TabIndex = 62;
@@ -190,7 +193,7 @@ namespace Project_OOP
             // priceLabel
             // 
             priceLabel.AutoSize = true;
-            priceLabel.Location = new System.Drawing.Point(15, 351);
+            priceLabel.Location = new System.Drawing.Point(12, 260);
             priceLabel.Name = "priceLabel";
             priceLabel.Size = new System.Drawing.Size(34, 13);
             priceLabel.TabIndex = 74;
@@ -199,7 +202,7 @@ namespace Project_OOP
             // fuelPerKMLabel
             // 
             fuelPerKMLabel.AutoSize = true;
-            fuelPerKMLabel.Location = new System.Drawing.Point(264, 44);
+            fuelPerKMLabel.Location = new System.Drawing.Point(260, 69);
             fuelPerKMLabel.Name = "fuelPerKMLabel";
             fuelPerKMLabel.Size = new System.Drawing.Size(68, 13);
             fuelPerKMLabel.TabIndex = 75;
@@ -208,29 +211,38 @@ namespace Project_OOP
             // maxSpeedLabel
             // 
             maxSpeedLabel.AutoSize = true;
-            maxSpeedLabel.Location = new System.Drawing.Point(268, 85);
+            maxSpeedLabel.Location = new System.Drawing.Point(561, 66);
             maxSpeedLabel.Name = "maxSpeedLabel";
             maxSpeedLabel.Size = new System.Drawing.Size(64, 13);
             maxSpeedLabel.TabIndex = 76;
             maxSpeedLabel.Text = "Max Speed:";
             // 
+            // imageLabel
+            // 
+            imageLabel.AutoSize = true;
+            imageLabel.Location = new System.Drawing.Point(13, 304);
+            imageLabel.Name = "imageLabel";
+            imageLabel.Size = new System.Drawing.Size(39, 13);
+            imageLabel.TabIndex = 77;
+            imageLabel.Text = "Image:";
+            // 
             // storageTextBox
             // 
-            this.storageTextBox.Location = new System.Drawing.Point(68, 318);
+            this.storageTextBox.Location = new System.Drawing.Point(314, 150);
             this.storageTextBox.Name = "storageTextBox";
             this.storageTextBox.Size = new System.Drawing.Size(42, 20);
             this.storageTextBox.TabIndex = 68;
             // 
             // seatsTextBox
             // 
-            this.seatsTextBox.Location = new System.Drawing.Point(58, 288);
+            this.seatsTextBox.Location = new System.Drawing.Point(304, 120);
             this.seatsTextBox.Name = "seatsTextBox";
             this.seatsTextBox.Size = new System.Drawing.Size(39, 20);
             this.seatsTextBox.TabIndex = 66;
             // 
             // doorsTextBox
             // 
-            this.doorsTextBox.Location = new System.Drawing.Point(58, 259);
+            this.doorsTextBox.Location = new System.Drawing.Point(304, 91);
             this.doorsTextBox.Name = "doorsTextBox";
             this.doorsTextBox.Size = new System.Drawing.Size(39, 20);
             this.doorsTextBox.TabIndex = 65;
@@ -372,6 +384,7 @@ namespace Project_OOP
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -426,6 +439,10 @@ namespace Project_OOP
             // 
             this.typeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Type", true));
             this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.Items.AddRange(new object[] {
+            "Bikes",
+            "Family car",
+            "Sports car"});
             this.typeComboBox.Location = new System.Drawing.Point(55, 44);
             this.typeComboBox.Name = "typeComboBox";
             this.typeComboBox.Size = new System.Drawing.Size(121, 21);
@@ -434,7 +451,7 @@ namespace Project_OOP
             // priceTextBox
             // 
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Price", true));
-            this.priceTextBox.Location = new System.Drawing.Point(55, 348);
+            this.priceTextBox.Location = new System.Drawing.Point(52, 257);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(100, 20);
             this.priceTextBox.TabIndex = 75;
@@ -442,42 +459,64 @@ namespace Project_OOP
             // fuelPerKMTextBox
             // 
             this.fuelPerKMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "FuelPerKM", true));
-            this.fuelPerKMTextBox.Location = new System.Drawing.Point(338, 41);
+            this.fuelPerKMTextBox.Location = new System.Drawing.Point(334, 66);
             this.fuelPerKMTextBox.Name = "fuelPerKMTextBox";
-            this.fuelPerKMTextBox.Size = new System.Drawing.Size(100, 20);
+            this.fuelPerKMTextBox.Size = new System.Drawing.Size(48, 20);
             this.fuelPerKMTextBox.TabIndex = 76;
             // 
             // maxSpeedTextBox
             // 
             this.maxSpeedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "MaxSpeed", true));
-            this.maxSpeedTextBox.Location = new System.Drawing.Point(338, 82);
+            this.maxSpeedTextBox.Location = new System.Drawing.Point(631, 63);
             this.maxSpeedTextBox.Name = "maxSpeedTextBox";
-            this.maxSpeedTextBox.Size = new System.Drawing.Size(100, 20);
+            this.maxSpeedTextBox.Size = new System.Drawing.Size(39, 20);
             this.maxSpeedTextBox.TabIndex = 77;
-            // 
-            // imageLabel
-            // 
-            imageLabel.AutoSize = true;
-            imageLabel.Location = new System.Drawing.Point(268, 126);
-            imageLabel.Name = "imageLabel";
-            imageLabel.Size = new System.Drawing.Size(39, 13);
-            imageLabel.TabIndex = 77;
-            imageLabel.Text = "Image:";
             // 
             // imagePictureBox
             // 
             this.imagePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.tableBindingSource, "Image", true));
-            this.imagePictureBox.Location = new System.Drawing.Point(313, 126);
+            this.imagePictureBox.Location = new System.Drawing.Point(58, 304);
             this.imagePictureBox.Name = "imagePictureBox";
             this.imagePictureBox.Size = new System.Drawing.Size(100, 50);
             this.imagePictureBox.TabIndex = 78;
             this.imagePictureBox.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(261, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.TabIndex = 80;
+            this.label2.Text = "Only for Family car:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(561, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 13);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Only for Sports car/Bikes:";
             // 
             // CreateVehicles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(imageLabel);
             this.Controls.Add(this.imagePictureBox);
             this.Controls.Add(maxSpeedLabel);
@@ -553,5 +592,8 @@ namespace Project_OOP
         private System.Windows.Forms.TextBox fuelPerKMTextBox;
         private System.Windows.Forms.TextBox maxSpeedTextBox;
         private System.Windows.Forms.PictureBox imagePictureBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

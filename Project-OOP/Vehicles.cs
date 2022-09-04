@@ -70,5 +70,10 @@ namespace Project_OOP
         {
 
         }
+
+        private void AddVehicle_Click(object sender, EventArgs e)
+        {
+            new CreateVehicles().Show();
+        }
     }
 }
