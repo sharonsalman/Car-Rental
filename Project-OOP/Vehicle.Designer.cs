@@ -30,93 +30,31 @@ namespace Project_OOP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.VehicleType = new System.Windows.Forms.Label();
-            this.CarType = new System.Windows.Forms.Label();
-            this.VehicleName = new System.Windows.Forms.Label();
-            this.comboBoxVehicleType = new System.Windows.Forms.ComboBox();
-            this.comboBoxCarType = new System.Windows.Forms.ComboBox();
-            this.comboBoxVehicleName = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vehicle));
             this.AddVehicle = new System.Windows.Forms.Button();
             this.databaseDataSet = new Project_OOP.DatabaseDataSet();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter = new Project_OOP.DatabaseDataSetTableAdapters.TableTableAdapter();
             this.CarSearchButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // VehicleType
-            // 
-            this.VehicleType.AutoSize = true;
-            this.VehicleType.Location = new System.Drawing.Point(710, 70);
-            this.VehicleType.Name = "VehicleType";
-            this.VehicleType.Size = new System.Drawing.Size(55, 13);
-            this.VehicleType.TabIndex = 0;
-            this.VehicleType.Text = "סוג הרכב";
-            // 
-            // CarType
-            // 
-            this.CarType.AutoSize = true;
-            this.CarType.Location = new System.Drawing.Point(701, 123);
-            this.CarType.Name = "CarType";
-            this.CarType.Size = new System.Drawing.Size(64, 13);
-            this.CarType.TabIndex = 1;
-            this.CarType.Text = "סוג מכונית";
-            this.CarType.Click += new System.EventHandler(this.CarType_Click);
-            // 
-            // VehicleName
-            // 
-            this.VehicleName.AutoSize = true;
-            this.VehicleName.Location = new System.Drawing.Point(712, 181);
-            this.VehicleName.Name = "VehicleName";
-            this.VehicleName.Size = new System.Drawing.Size(53, 13);
-            this.VehicleName.TabIndex = 2;
-            this.VehicleName.Text = "שם הרכב";
-            // 
-            // comboBoxVehicleType
-            // 
-            this.comboBoxVehicleType.FormattingEnabled = true;
-            this.comboBoxVehicleType.Items.AddRange(new object[] {
-            "Motorcycle",
-            "Car"});
-            this.comboBoxVehicleType.Location = new System.Drawing.Point(543, 67);
-            this.comboBoxVehicleType.Name = "comboBoxVehicleType";
-            this.comboBoxVehicleType.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVehicleType.TabIndex = 3;
-            this.comboBoxVehicleType.SelectedIndexChanged += new System.EventHandler(this.comboBoxVehicleType_SelectedIndexChanged);
-            // 
-            // comboBoxCarType
-            // 
-            this.comboBoxCarType.Enabled = false;
-            this.comboBoxCarType.FormattingEnabled = true;
-            this.comboBoxCarType.Items.AddRange(new object[] {
-            "Family Car",
-            "Sport Car"});
-            this.comboBoxCarType.Location = new System.Drawing.Point(543, 123);
-            this.comboBoxCarType.Name = "comboBoxCarType";
-            this.comboBoxCarType.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxCarType.TabIndex = 4;
-            this.comboBoxCarType.SelectedIndexChanged += new System.EventHandler(this.comboBoxCarType_SelectedIndexChanged);
-            // 
-            // comboBoxVehicleName
-            // 
-            this.comboBoxVehicleName.DataSource = this.tableBindingSource;
-            this.comboBoxVehicleName.DisplayMember = "VehicleName";
-            this.comboBoxVehicleName.Enabled = false;
-            this.comboBoxVehicleName.FormattingEnabled = true;
-            this.comboBoxVehicleName.Location = new System.Drawing.Point(543, 173);
-            this.comboBoxVehicleName.Name = "comboBoxVehicleName";
-            this.comboBoxVehicleName.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVehicleName.TabIndex = 5;
             // 
             // AddVehicle
             // 
-            this.AddVehicle.Location = new System.Drawing.Point(665, 383);
+            this.AddVehicle.BackColor = System.Drawing.SystemColors.Menu;
+            this.AddVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddVehicle.ForeColor = System.Drawing.Color.OrangeRed;
+            this.AddVehicle.Location = new System.Drawing.Point(32, 299);
             this.AddVehicle.Name = "AddVehicle";
-            this.AddVehicle.Size = new System.Drawing.Size(123, 55);
+            this.AddVehicle.Size = new System.Drawing.Size(186, 55);
             this.AddVehicle.TabIndex = 6;
             this.AddVehicle.Text = "הוספת רכב";
-            this.AddVehicle.UseVisualStyleBackColor = true;
+            this.AddVehicle.UseVisualStyleBackColor = false;
             this.AddVehicle.Click += new System.EventHandler(this.AddVehicle_Click);
             // 
             // databaseDataSet
@@ -135,49 +73,65 @@ namespace Project_OOP
             // 
             // CarSearchButton
             // 
-            this.CarSearchButton.Location = new System.Drawing.Point(198, 119);
+            this.CarSearchButton.BackColor = System.Drawing.SystemColors.Menu;
+            this.CarSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CarSearchButton.ForeColor = System.Drawing.Color.OrangeRed;
+            this.CarSearchButton.Location = new System.Drawing.Point(276, 299);
             this.CarSearchButton.Name = "CarSearchButton";
-            this.CarSearchButton.Size = new System.Drawing.Size(189, 34);
+            this.CarSearchButton.Size = new System.Drawing.Size(186, 55);
             this.CarSearchButton.TabIndex = 7;
-            this.CarSearchButton.Text = "מצא לי מכונית!";
-            this.CarSearchButton.UseVisualStyleBackColor = true;
+            this.CarSearchButton.Text = "רשימת רכבים";
+            this.CarSearchButton.UseVisualStyleBackColor = false;
             this.CarSearchButton.Click += new System.EventHandler(this.CarSearchButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Menu;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.button1.Location = new System.Drawing.Point(530, 299);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 55);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "הוספת לקוח חדש";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(128, 66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(484, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // Vehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.CarSearchButton);
             this.Controls.Add(this.AddVehicle);
-            this.Controls.Add(this.comboBoxVehicleName);
-            this.Controls.Add(this.comboBoxCarType);
-            this.Controls.Add(this.comboBoxVehicleType);
-            this.Controls.Add(this.VehicleName);
-            this.Controls.Add(this.CarType);
-            this.Controls.Add(this.VehicleType);
             this.Name = "Vehicle";
             this.Text = "Vehicle";
             this.Load += new System.EventHandler(this.Vehicle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label VehicleType;
-        private System.Windows.Forms.Label CarType;
-        private System.Windows.Forms.Label VehicleName;
-        private System.Windows.Forms.ComboBox comboBoxVehicleType;
-        private System.Windows.Forms.ComboBox comboBoxCarType;
-        private System.Windows.Forms.ComboBox comboBoxVehicleName;
         private System.Windows.Forms.Button AddVehicle;
         private DatabaseDataSet databaseDataSet;
         private System.Windows.Forms.BindingSource tableBindingSource;
         private DatabaseDataSetTableAdapters.TableTableAdapter tableTableAdapter;
         private System.Windows.Forms.Button CarSearchButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
