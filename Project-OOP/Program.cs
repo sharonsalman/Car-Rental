@@ -22,7 +22,7 @@ namespace Project_OOP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vehicles());
+            Application.Run(new Vehicle());
             
 
         }

@@ -28,7 +28,6 @@ C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.Bikes.resources
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.FamilyCar.resources
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.SportCar.resources
-C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.Vehicles.resources
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.Properties.Resources.resources
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project-OOP.csproj.GenerateResource.cache
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project-OOP.csproj.CoreCompileInputs.cache
@@ -40,4 +39,5 @@ C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\EntityFramework.xml
 C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.CreateVehicles.resources
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.CreateVehicle.resources
+C:\Users\heli\Desktop\שרון לימודים\מונחה\Project\Project-OOP\obj\Debug\Project_OOP.Vehicle.resources
