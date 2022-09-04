@@ -30,13 +30,21 @@ namespace Project_OOP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.VehicleType = new System.Windows.Forms.ComboBox();
             this.CarType = new System.Windows.Forms.ComboBox();
             this.VehicleName = new System.Windows.Forms.ComboBox();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataOOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataOOP = new Project_OOP.DatabaseDataOOP();
             this.AddVehicle = new System.Windows.Forms.Button();
+            this.tableTableAdapter = new Project_OOP.DatabaseDataOOPTableAdapters.TableTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataOOPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataOOP)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +60,7 @@ namespace Project_OOP
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(326, 207);
+            this.label2.Location = new System.Drawing.Point(307, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 13);
             this.label2.TabIndex = 6;
@@ -67,6 +75,7 @@ namespace Project_OOP
             this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "שם הרכב להשכרה";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // VehicleType
             // 
@@ -87,7 +96,7 @@ namespace Project_OOP
             this.CarType.Items.AddRange(new object[] {
             "Family",
             "Sports"});
-            this.CarType.Location = new System.Drawing.Point(308, 245);
+            this.CarType.Location = new System.Drawing.Point(299, 245);
             this.CarType.Name = "CarType";
             this.CarType.Size = new System.Drawing.Size(170, 21);
             this.CarType.TabIndex = 9;
@@ -95,16 +104,30 @@ namespace Project_OOP
             // 
             // VehicleName
             // 
-            this.VehicleName.Enabled = false;
+            this.VehicleName.DataSource = this.tableBindingSource;
+            this.VehicleName.DisplayMember = "VehicleName";
             this.VehicleName.FormattingEnabled = true;
-            this.VehicleName.Items.AddRange(new object[] {
-            "Family",
-            "Sports"});
             this.VehicleName.Location = new System.Drawing.Point(57, 245);
             this.VehicleName.Name = "VehicleName";
             this.VehicleName.Size = new System.Drawing.Size(170, 21);
             this.VehicleName.TabIndex = 10;
+            this.VehicleName.ValueMember = "Type";
             this.VehicleName.SelectedIndexChanged += new System.EventHandler(this.VehicleName_SelectedIndexChanged);
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.databaseDataOOPBindingSource;
+            // 
+            // databaseDataOOPBindingSource
+            // 
+            this.databaseDataOOPBindingSource.DataSource = this.databaseDataOOP;
+            this.databaseDataOOPBindingSource.Position = 0;
+            // 
+            // databaseDataOOP
+            // 
+            this.databaseDataOOP.DataSetName = "DatabaseDataOOP";
+            this.databaseDataOOP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // AddVehicle
             // 
@@ -115,6 +138,10 @@ namespace Project_OOP
             this.AddVehicle.Text = "הוספת רכב";
             this.AddVehicle.UseVisualStyleBackColor = true;
             this.AddVehicle.Click += new System.EventHandler(this.AddVehicle_Click);
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
             // 
             // Vehicles
             // 
@@ -131,6 +158,9 @@ namespace Project_OOP
             this.Name = "Vehicles";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataOOPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataOOP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +174,10 @@ namespace Project_OOP
         private System.Windows.Forms.ComboBox CarType;
         private System.Windows.Forms.ComboBox VehicleName;
         private System.Windows.Forms.Button AddVehicle;
+        private System.Windows.Forms.BindingSource databaseDataOOPBindingSource;
+        private DatabaseDataOOP databaseDataOOP;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private DatabaseDataOOPTableAdapters.TableTableAdapter tableTableAdapter;
     }
 }
 

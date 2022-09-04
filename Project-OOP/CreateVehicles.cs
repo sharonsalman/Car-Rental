@@ -36,5 +36,15 @@ namespace Project_OOP
         {
 
         }
+
+        private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -25,6 +25,9 @@ namespace Project_OOP
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'databaseDataOOP.Table' table. You can move, or remove it, as needed.
+            this.tableTableAdapter.Fill(this.databaseDataOOP.Table);
+            VehicleClass [] vehicle = new VehicleClass [10] ;
 
         }
 
@@ -49,15 +52,10 @@ namespace Project_OOP
 
         private void VehicleName_SelectedIndexChanged(object sender, EventArgs e)
         {
-                // נבנה מערך של כל הרכבים ולפי הלחיצה הקודמת נעלה את השמות הרצויים
-                VehicleClass[] arr = new VehicleClass[10];
                 if (CarType.SelectedItem.ToString().Equals("Family"))
                 {
-                    for (int i = 0; i < 10; i++)
-                    { 
-                        VehicleName.Items.Insert(1, "Name");
-                    }
-                }
+                VehicleName.ValueMember = "Type";
+            }
 
         }
 
@@ -74,6 +72,11 @@ namespace Project_OOP
         private void AddVehicle_Click(object sender, EventArgs e)
         {
             new CreateVehicles().Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

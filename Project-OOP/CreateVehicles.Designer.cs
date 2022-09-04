@@ -340,6 +340,7 @@ namespace Project_OOP
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -447,6 +448,7 @@ namespace Project_OOP
             this.typeComboBox.Name = "typeComboBox";
             this.typeComboBox.Size = new System.Drawing.Size(121, 21);
             this.typeComboBox.TabIndex = 74;
+            this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
             // priceTextBox
             // 
@@ -477,7 +479,7 @@ namespace Project_OOP
             this.imagePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.tableBindingSource, "Image", true));
             this.imagePictureBox.Location = new System.Drawing.Point(58, 304);
             this.imagePictureBox.Name = "imagePictureBox";
-            this.imagePictureBox.Size = new System.Drawing.Size(100, 50);
+            this.imagePictureBox.Size = new System.Drawing.Size(145, 106);
             this.imagePictureBox.TabIndex = 78;
             this.imagePictureBox.TabStop = false;
             // 
