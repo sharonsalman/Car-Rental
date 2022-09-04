@@ -24,11 +24,14 @@ namespace Project_OOP
 
         private void Vehicle_Load(object sender, EventArgs e)
         {
-            VehicleClass[] vehicle = new VehicleClass[10];
+            // TODO: This line of code loads data into the 'databaseDataSet.Table' table. You can move, or remove it, as needed.
+            this.tableTableAdapter.Fill(this.databaseDataSet.Table);
+            List<VehicleClass> vehicle = new List<VehicleClass>(); 
         }
 
         private void comboBoxCarType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBoxVehicleName.Enabled = true;
             if (comboBoxCarType.SelectedItem.ToString().Equals("Family Car"))
             {
                 comboBoxVehicleName.ValueMember = "Type";
@@ -53,6 +56,9 @@ namespace Project_OOP
             new CreateVehicle().Show();
         }
 
-      
+        private void CarSearchButton_Click(object sender, EventArgs e)
+        {
+           // if (comboBoxVehicleName.GetType = "Family Car") new FamilyCar().Show();
+        }
     }
 }

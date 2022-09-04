@@ -29,6 +29,7 @@ namespace Project_OOP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.VehicleType = new System.Windows.Forms.Label();
             this.CarType = new System.Windows.Forms.Label();
             this.VehicleName = new System.Windows.Forms.Label();
@@ -36,6 +37,12 @@ namespace Project_OOP
             this.comboBoxCarType = new System.Windows.Forms.ComboBox();
             this.comboBoxVehicleName = new System.Windows.Forms.ComboBox();
             this.AddVehicle = new System.Windows.Forms.Button();
+            this.databaseDataSet = new Project_OOP.DatabaseDataSet();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableTableAdapter = new Project_OOP.DatabaseDataSetTableAdapters.TableTableAdapter();
+            this.CarSearchButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // VehicleType
@@ -93,6 +100,8 @@ namespace Project_OOP
             // 
             // comboBoxVehicleName
             // 
+            this.comboBoxVehicleName.DataSource = this.tableBindingSource;
+            this.comboBoxVehicleName.DisplayMember = "VehicleName";
             this.comboBoxVehicleName.Enabled = false;
             this.comboBoxVehicleName.FormattingEnabled = true;
             this.comboBoxVehicleName.Location = new System.Drawing.Point(543, 173);
@@ -110,11 +119,36 @@ namespace Project_OOP
             this.AddVehicle.UseVisualStyleBackColor = true;
             this.AddVehicle.Click += new System.EventHandler(this.AddVehicle_Click);
             // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
+            // CarSearchButton
+            // 
+            this.CarSearchButton.Location = new System.Drawing.Point(198, 119);
+            this.CarSearchButton.Name = "CarSearchButton";
+            this.CarSearchButton.Size = new System.Drawing.Size(189, 34);
+            this.CarSearchButton.TabIndex = 7;
+            this.CarSearchButton.Text = "מצא לי מכונית!";
+            this.CarSearchButton.UseVisualStyleBackColor = true;
+            this.CarSearchButton.Click += new System.EventHandler(this.CarSearchButton_Click);
+            // 
             // Vehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CarSearchButton);
             this.Controls.Add(this.AddVehicle);
             this.Controls.Add(this.comboBoxVehicleName);
             this.Controls.Add(this.comboBoxCarType);
@@ -125,6 +159,8 @@ namespace Project_OOP
             this.Name = "Vehicle";
             this.Text = "Vehicle";
             this.Load += new System.EventHandler(this.Vehicle_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +175,9 @@ namespace Project_OOP
         private System.Windows.Forms.ComboBox comboBoxCarType;
         private System.Windows.Forms.ComboBox comboBoxVehicleName;
         private System.Windows.Forms.Button AddVehicle;
+        private DatabaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private DatabaseDataSetTableAdapters.TableTableAdapter tableTableAdapter;
+        private System.Windows.Forms.Button CarSearchButton;
     }
 }
