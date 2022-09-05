@@ -57,7 +57,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -85,10 +87,16 @@
     <Compile Include="CreateVehicle.Designer.cs">
       <DependentUpon>CreateVehicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseDataSet.Designer.cs">
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseCarRental.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>DatabaseCarRental.xsd</DependentUpon>
     </Compile>
     <Compile Include="FamilyCar.cs">
       <SubType>Form</SubType>
@@ -97,6 +105,12 @@
       <DependentUpon>FamilyCar.cs</DependentUpon>
     </Compile>
     <Compile Include="FamilyCarsClass.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="SportCar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +118,6 @@
       <DependentUpon>SportCar.cs</DependentUpon>
     </Compile>
     <Compile Include="SportsCarsClass.cs" />
-    <Compile Include="Vehicle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vehicle.Designer.cs">
-      <DependentUpon>Vehicle.cs</DependentUpon>
-    </Compile>
     <Compile Include="VehicleClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,8 +127,14 @@
     <EmbeddedResource Include="CreateVehicle.resx">
       <DependentUpon>CreateVehicle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FamilyCar.resx">
       <DependentUpon>FamilyCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SportCar.resx">
       <DependentUpon>SportCar.cs</DependentUpon>
@@ -134,19 +148,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vehicle.resx">
-      <DependentUpon>Vehicle.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="DatabaseDataSet.xsc">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    <None Include="DatabaseCarRental.xsc">
+      <DependentUpon>DatabaseCarRental.xsd</DependentUpon>
     </None>
-    <None Include="DatabaseDataSet.xsd">
+    <None Include="DatabaseCarRental.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DatabaseCarRental.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DatabaseDataSet.xss">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    <None Include="DatabaseCarRental.xss">
+      <DependentUpon>DatabaseCarRental.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

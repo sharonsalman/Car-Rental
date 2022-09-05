@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,28 +18,32 @@ namespace Project_OOP
             InitializeComponent();
         }
 
-        private void tableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void carBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.tableBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.databaseDataSet);
+            this.carBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.databaseCarRental);
 
         }
 
         private void CreateVehicle_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'databaseDataSet.Table' table. You can move, or remove it, as needed.
-            this.tableTableAdapter.Fill(this.databaseDataSet.Table);
+            // TODO: This line of code loads data into the 'databaseCarRental.Car' table. You can move, or remove it, as needed.
+            this.carTableAdapter.Fill(this.databaseCarRental.Car);
 
         }
 
-        private void licensePlateLabel_Click(object sender, EventArgs e)
+        private void BackMenu_Click(object sender, EventArgs e)
         {
-
+            Menu menuform = new Menu();
+            new Menu().Show();
+            this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Save_Click(object sender, EventArgs e)
         {
+            string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C: \\Users\\Sharon\\Desktop\\לימודים\\מונחה עצמים\\Car - Rental\\Project - OOP\\Database.mdf;Integrated Security=True";
+            SqlConnection con = new SqlConnection(conString);
 
         }
     }
