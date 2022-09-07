@@ -85,4 +85,4 @@ C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project-OOP.csproj.Gene
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project-OOP.csproj.CoreCompileInputs.cache
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project-OOP.exe
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project-OOP.pdb
-C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project_OOP.Test.resources
+C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project_OOP.RentalDisplay.resources

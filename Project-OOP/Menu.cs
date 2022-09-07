@@ -25,9 +25,9 @@ namespace Project_OOP
 
         private void Invoice_Click(object sender, EventArgs e)
         {
-            Invoice invoiceform = new Invoice();
+/*            Invoice invoiceform = new Invoice();
             new Invoice().Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void AddCustomer_Click(object sender, EventArgs e)

@@ -62,7 +62,7 @@ namespace Project_OOP
             String type = (String)(row.Cells["Type"].Value.ToString());
             VehicleClass vehicle = ExtractVehicleDataFromRow(row);
 
-            Test FamilyCarForm = new Test(vehicle, type);
+            RentalDisplay FamilyCarForm = new RentalDisplay(vehicle, type);
             FamilyCarForm.Show();
             this.Hide();
 
