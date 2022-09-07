@@ -45,7 +45,6 @@ namespace Project_OOP
             System.Windows.Forms.Label fuelPerKMLabel;
             System.Windows.Forms.Label typeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateVehicle));
-            this.Delete = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.BackMenu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -227,22 +226,11 @@ namespace Project_OOP
             typeLabel.TabIndex = 34;
             typeLabel.Text = "Type:";
             // 
-            // Delete
-            // 
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Delete.ForeColor = System.Drawing.Color.Tomato;
-            this.Delete.Location = new System.Drawing.Point(641, 543);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(167, 53);
-            this.Delete.TabIndex = 7;
-            this.Delete.Text = "מחיקה";
-            this.Delete.UseVisualStyleBackColor = true;
-            // 
             // Save
             // 
             this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Save.ForeColor = System.Drawing.Color.Tomato;
-            this.Save.Location = new System.Drawing.Point(397, 543);
+            this.Save.Location = new System.Drawing.Point(529, 543);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(167, 53);
             this.Save.TabIndex = 6;
@@ -375,7 +363,6 @@ namespace Project_OOP
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -569,7 +556,6 @@ namespace Project_OOP
             this.Controls.Add(this.fuelPerKMTextBox);
             this.Controls.Add(typeLabel);
             this.Controls.Add(this.carBindingNavigator);
-            this.Controls.Add(this.Delete);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.BackMenu);
             this.Controls.Add(this.pictureBox1);
@@ -588,8 +574,6 @@ namespace Project_OOP
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button BackMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
