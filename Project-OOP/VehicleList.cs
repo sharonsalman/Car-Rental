@@ -25,11 +25,10 @@ namespace Project_OOP
         SqlConnection con;
         SqlCommand cmd;
         DataTable table = new DataTable();
-
+        List<VehicleClass> vehicleList;
         private void VehicleList_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'databaseCarRental.Car' table. You can move, or remove it, as needed.
-            //this.carTableAdapter.Fill(this.databaseCarRental.Car);
+
             set_up_grid();
         }
 
@@ -47,6 +46,62 @@ namespace Project_OOP
             DataTable table = new DataTable();
             adpt.Fill(table);
             dataGridView1.DataSource = table;
+
+            this.vehicleList = LoadList(table);
+        }
+
+        private List<VehicleClass> LoadList(DataTable data)
+        {
+            return data.AsEnumerable().Select(r => createVehicleFromObject(r)).ToList();
+        }
+
+        private VehicleClass createVehicleFromObject(DataRow row)
+        {
+
+            int LicensePlate = (int)row["LicensePlate"];
+            String Type = (String)(row["Type"].ToString());
+            String VehicleName = (String)(row["VehicleName"].ToString());
+            String Color = (String)(row["Color"].ToString());
+            String CompanyName = (String)(row["CompanyName"].ToString());
+            int Price = (int)row["Price"];
+            int Safety = (int)row["Safety"];
+            int Distance = (int)row["Distance"];
+            int Year = (int)row["Year"];
+
+            int Doors, Seats, Storage, MaxSpeed, FuelPerKM;
+            VehicleClass vehicle = null;
+
+            switch (Type.Trim())
+            {
+                case "Family":
+                    Doors = (int)row["Doors"];
+                    Seats = (int)row["Seats"];
+                    Storage = (int)row["Storage"];
+                    FuelPerKM = (int)row["FuelPerKM"];
+                    vehicle = new FamilyCarsClass(FuelPerKM, Year, Distance, Safety, Price,
+                        CompanyName, Color, VehicleName, LicensePlate, Doors, Seats, Storage);
+
+                    break;
+                case "Sport":
+                    Doors = (int)row["Doors"];
+                    Seats = (int)row["Seats"];
+                    Storage = (int)row["Storage"];
+                    MaxSpeed = (int)row["MaxSpeed"];
+                    vehicle = new SportsCarsClass(MaxSpeed, Year, Distance, Safety, Price,
+                        CompanyName, Color, VehicleName, LicensePlate, Doors, Seats, Storage);
+                    break;
+                case "Motorbike":
+                    MaxSpeed = (int)row["MaxSpeed"];
+                    vehicle = new BikesClass(MaxSpeed, Year, Distance, Safety, Price,
+                    CompanyName, Color, VehicleName, LicensePlate);
+                    break;
+                default:
+                    vehicle = new FamilyCarsClass(0, Year, Distance, Safety, Price,
+                        CompanyName, Color, VehicleName, LicensePlate, 0, 0, 0);
+                    break;
+            }
+
+            return vehicle;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -60,70 +115,27 @@ namespace Project_OOP
                 return;
 
             String type = (String)(row.Cells["Type"].Value.ToString());
-            VehicleClass vehicle = ExtractVehicleDataFromRow(row);
+            VehicleClass vehicle = this.vehicleList[e.RowIndex];
 
             RentalDisplay FamilyCarForm = new RentalDisplay(vehicle, type);
             FamilyCarForm.Show();
             this.Hide();
 
         }
-/*
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }*/
-
-        private VehicleClass ExtractVehicleDataFromRow(DataGridViewRow row)
-        {
-            int LicensePlate = (int)row.Cells["LicensePlate"].Value;
-            String Type = (String)(row.Cells["Type"].Value.ToString());
-            String VehicleName = (String)(row.Cells["VehicleName"].Value.ToString());
-            String Color = (String)(row.Cells["Color"].Value.ToString());
-            String CompanyName = (String)(row.Cells["CompanyName"].Value.ToString());
-            int Price = (int)row.Cells["Price"].Value;
-            int Safety = (int)row.Cells["Safety"].Value;
-            int Distance = (int)row.Cells["Distance"].Value;
-            int Year = (int)row.Cells["Year"].Value;
-
-            int Doors, Seats, Storage, MaxSpeed, FuelPerKM;
-            VehicleClass vehicle = null;
-            switch (Type.Trim())
-            {
-                case "Family":
-                    Doors = (int)row.Cells["Doors"].Value;
-                    Seats = (int)row.Cells["Seats"].Value;
-                    Storage = (int)row.Cells["Storage"].Value;
-                    FuelPerKM = (int)row.Cells["FuelPerKM"].Value;
-                    vehicle = new FamilyCarsClass(FuelPerKM,Year,Distance,Safety,Price,
-                        CompanyName,Color,VehicleName,LicensePlate,Doors,Seats,Storage);
-
-                    break;
-                case "Sport":
-                    Doors = (int)row.Cells["Doors"].Value;
-                    Seats = (int)row.Cells["Seats"].Value;
-                    Storage = (int)row.Cells["Storage"].Value;
-                    MaxSpeed = (int)row.Cells["MaxSpeed"].Value;
-                    vehicle = new SportsCarsClass(MaxSpeed, Year, Distance, Safety, Price,
-                        CompanyName, Color, VehicleName, LicensePlate, Doors, Seats, Storage);
-                    break;
-                case "Motorbike":
-                    MaxSpeed = (int)row.Cells["MaxSpeed"].Value;
-                    vehicle = new BikesClass(MaxSpeed, Year, Distance, Safety, Price,
-                    CompanyName, Color, VehicleName, LicensePlate);
-                    break;
-                default:
-                    vehicle = new FamilyCarsClass(0, Year, Distance, Safety, Price,
-                        CompanyName, Color, VehicleName, LicensePlate, 0, 0, 0);
-                    break;
-            }
-
-            return vehicle;
-        }
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
             new Menu().Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+                dataGridView1.Rows.RemoveAt(e.RowIndex);
+                vehicleList.RemoveAt(e.RowIndex);
+            }
         }
     }
 }
