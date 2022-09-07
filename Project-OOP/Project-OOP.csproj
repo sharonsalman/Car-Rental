@@ -98,11 +98,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseCarRental.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FamilyCar.cs">
+    <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FamilyCar.Designer.cs">
-      <DependentUpon>FamilyCar.cs</DependentUpon>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="FamilyCarsClass.cs" />
     <Compile Include="Invoice.cs">
@@ -142,8 +142,8 @@
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FamilyCar.resx">
-      <DependentUpon>FamilyCar.cs</DependentUpon>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>

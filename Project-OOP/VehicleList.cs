@@ -49,18 +49,8 @@ namespace Project_OOP
             dataGridView1.DataSource = table;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            FamilyCar FamilyCarForm = new FamilyCar();
-            new FamilyCar().Show();
-            this.Hide();
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //FamilyCar FamilyCarForm = new FamilyCar();
-            //new FamilyCar().Show();
-            //this.Hide();
 
             if (e.RowIndex < 0)
                 return;
@@ -69,6 +59,22 @@ namespace Project_OOP
             if (row.Cells["LicensePlate"].Value.ToString() == "")
                 return;
 
+            String type = (String)(row.Cells["Type"].Value.ToString());
+            VehicleClass vehicle = ExtractVehicleDataFromRow(row);
+
+            Test FamilyCarForm = new Test(vehicle, type);
+            FamilyCarForm.Show();
+            this.Hide();
+
+        }
+/*
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }*/
+
+        private VehicleClass ExtractVehicleDataFromRow(DataGridViewRow row)
+        {
             int LicensePlate = (int)row.Cells["LicensePlate"].Value;
             String Type = (String)(row.Cells["Type"].Value.ToString());
             String VehicleName = (String)(row.Cells["VehicleName"].Value.ToString());
@@ -79,22 +85,39 @@ namespace Project_OOP
             int Distance = (int)row.Cells["Distance"].Value;
             int Year = (int)row.Cells["Year"].Value;
 
-            Console.WriteLine(LicensePlate);
-            Console.WriteLine(Type);
-            Console.WriteLine(VehicleName);
-            Console.WriteLine(Color);
-            Console.WriteLine(CompanyName);
-            Console.WriteLine(Price);
-            Console.WriteLine(Safety);
-            Console.WriteLine(Distance);
-            Console.WriteLine(Year);
+            int Doors, Seats, Storage, MaxSpeed, FuelPerKM;
+            VehicleClass vehicle = null;
+            switch (Type.Trim())
+            {
+                case "Family":
+                    Doors = (int)row.Cells["Doors"].Value;
+                    Seats = (int)row.Cells["Seats"].Value;
+                    Storage = (int)row.Cells["Storage"].Value;
+                    FuelPerKM = (int)row.Cells["FuelPerKM"].Value;
+                    vehicle = new FamilyCarsClass(FuelPerKM,Year,Distance,Safety,Price,
+                        CompanyName,Color,VehicleName,LicensePlate,Doors,Seats,Storage);
 
+                    break;
+                case "Sport":
+                    Doors = (int)row.Cells["Doors"].Value;
+                    Seats = (int)row.Cells["Seats"].Value;
+                    Storage = (int)row.Cells["Storage"].Value;
+                    MaxSpeed = (int)row.Cells["MaxSpeed"].Value;
+                    vehicle = new SportsCarsClass(MaxSpeed, Year, Distance, Safety, Price,
+                        CompanyName, Color, VehicleName, LicensePlate, Doors, Seats, Storage);
+                    break;
+                case "Motorbike":
+                    MaxSpeed = (int)row.Cells["MaxSpeed"].Value;
+                    vehicle = new BikesClass(MaxSpeed, Year, Distance, Safety, Price,
+                    CompanyName, Color, VehicleName, LicensePlate);
+                    break;
+                default:
+                    vehicle = new FamilyCarsClass(0, Year, Distance, Safety, Price,
+                        CompanyName, Color, VehicleName, LicensePlate, 0, 0, 0);
+                    break;
+            }
 
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
+            return vehicle;
         }
     }
 }

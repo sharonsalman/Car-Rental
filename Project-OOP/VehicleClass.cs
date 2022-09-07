@@ -7,19 +7,20 @@ using System.Threading.Tasks;
 namespace Project_OOP
 {
 
-   abstract class VehicleClass
+   public abstract class VehicleClass
     {
-        private int Year;
-        private int Distance;
-        private int Safety;
-        private int Price;
-        private string CompanyName;
-        private string Color;
-        private string VehicleName;
-        private string LicensePlate;
+        public int Year { get; private set; }
+
+        public int Distance { get; private set; }
+        public int Safety { get; private set; }
+        public int Price { get; private set; }
+        public string CompanyName { get; private set; }
+        public string Color { get; private set; }
+        public string VehicleName { get; private set; }
+        public int LicensePlate { get; private set; }
 
         public VehicleClass(int _Year, int _Distance , int _Safety , int _Price ,
-            string _CompanyName , string _Color , string _VehicleName , string _LicensePlate)
+            string _CompanyName , string _Color , string _VehicleName , int _LicensePlate)
         {
             Year = _Year;
             Distance = _Distance;
@@ -29,6 +30,11 @@ namespace Project_OOP
             Color = _Color;
             VehicleName = _VehicleName;
             LicensePlate = _LicensePlate;
+        }
+
+        public override string ToString()
+        {
+            return this.VehicleName;
         }
 
     }

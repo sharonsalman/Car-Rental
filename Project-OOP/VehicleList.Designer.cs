@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace Project_OOP
 {
     partial class VehicleList
@@ -100,6 +103,11 @@ namespace Project_OOP
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).EndInit();
             this.ResumeLayout(false);
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
