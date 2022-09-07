@@ -30,12 +30,11 @@ namespace Project_OOP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label invoiceNumberLabel;
             System.Windows.Forms.Label dateLabel;
             System.Windows.Forms.Label CarLicenseLabel;
-            System.Windows.Forms.Label customeridLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice));
             System.Windows.Forms.Label PriceLabel;
+            System.Windows.Forms.Label invoiceNumberLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.databaseCarRental = new Project_OOP.DatabaseCarRental();
             this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,17 +53,16 @@ namespace Project_OOP
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.invoiceBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.invoiceNumberTextBox = new System.Windows.Forms.TextBox();
             this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CarLicenseTB = new System.Windows.Forms.TextBox();
-            this.customeridTB = new System.Windows.Forms.TextBox();
-            this.Pay = new System.Windows.Forms.Button();
+            this.PayButton = new System.Windows.Forms.Button();
             this.PriceTB = new System.Windows.Forms.TextBox();
-            invoiceNumberLabel = new System.Windows.Forms.Label();
+            this.invoiceNumberTB = new System.Windows.Forms.TextBox();
+            this.ReturnButton = new System.Windows.Forms.Button();
             dateLabel = new System.Windows.Forms.Label();
             CarLicenseLabel = new System.Windows.Forms.Label();
-            customeridLabel = new System.Windows.Forms.Label();
             PriceLabel = new System.Windows.Forms.Label();
+            invoiceNumberLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseCarRental)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
@@ -72,19 +70,10 @@ namespace Project_OOP
             this.invoiceBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
-            // invoiceNumberLabel
-            // 
-            invoiceNumberLabel.AutoSize = true;
-            invoiceNumberLabel.Location = new System.Drawing.Point(315, 267);
-            invoiceNumberLabel.Name = "invoiceNumberLabel";
-            invoiceNumberLabel.Size = new System.Drawing.Size(85, 13);
-            invoiceNumberLabel.TabIndex = 72;
-            invoiceNumberLabel.Text = "Invoice Number:";
-            // 
             // dateLabel
             // 
             dateLabel.AutoSize = true;
-            dateLabel.Location = new System.Drawing.Point(315, 294);
+            dateLabel.Location = new System.Drawing.Point(260, 299);
             dateLabel.Name = "dateLabel";
             dateLabel.Size = new System.Drawing.Size(33, 13);
             dateLabel.TabIndex = 74;
@@ -93,26 +82,35 @@ namespace Project_OOP
             // CarLicenseLabel
             // 
             CarLicenseLabel.AutoSize = true;
-            CarLicenseLabel.Location = new System.Drawing.Point(315, 319);
+            CarLicenseLabel.Location = new System.Drawing.Point(260, 324);
             CarLicenseLabel.Name = "CarLicenseLabel";
             CarLicenseLabel.Size = new System.Drawing.Size(66, 13);
             CarLicenseLabel.TabIndex = 76;
             CarLicenseLabel.Text = "Car License:";
             // 
-            // customeridLabel
+            // PriceLabel
             // 
-            customeridLabel.AutoSize = true;
-            customeridLabel.Location = new System.Drawing.Point(315, 345);
-            customeridLabel.Name = "customeridLabel";
-            customeridLabel.Size = new System.Drawing.Size(62, 13);
-            customeridLabel.TabIndex = 78;
-            customeridLabel.Text = "Customerid:";
-            customeridLabel.Click += new System.EventHandler(this.customeridLabel_Click);
+            PriceLabel.AutoSize = true;
+            PriceLabel.Location = new System.Drawing.Point(260, 350);
+            PriceLabel.Name = "PriceLabel";
+            PriceLabel.Size = new System.Drawing.Size(34, 13);
+            PriceLabel.TabIndex = 81;
+            PriceLabel.Text = "Price:";
+            // 
+            // invoiceNumberLabel
+            // 
+            invoiceNumberLabel.AutoSize = true;
+            invoiceNumberLabel.Location = new System.Drawing.Point(260, 271);
+            invoiceNumberLabel.Name = "invoiceNumberLabel";
+            invoiceNumberLabel.Size = new System.Drawing.Size(85, 13);
+            invoiceNumberLabel.TabIndex = 78;
+            invoiceNumberLabel.Text = "Invoice Number:";
+            invoiceNumberLabel.Click += new System.EventHandler(this.customeridLabel_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(236, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(170, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(491, 158);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,7 +134,6 @@ namespace Project_OOP
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CustomerTableAdapter = null;
             this.tableAdapterManager.InvoiceTableAdapter = this.invoiceTableAdapter;
             this.tableAdapterManager.UpdateOrder = Project_OOP.DatabaseCarRentalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -166,7 +163,7 @@ namespace Project_OOP
             this.invoiceBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.invoiceBindingNavigator.Name = "invoiceBindingNavigator";
             this.invoiceBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.invoiceBindingNavigator.Size = new System.Drawing.Size(984, 25);
+            this.invoiceBindingNavigator.Size = new System.Drawing.Size(843, 25);
             this.invoiceBindingNavigator.TabIndex = 72;
             this.invoiceBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -265,20 +262,11 @@ namespace Project_OOP
             this.invoiceBindingNavigatorSaveItem.Text = "Save Data";
             this.invoiceBindingNavigatorSaveItem.Click += new System.EventHandler(this.invoiceBindingNavigatorSaveItem_Click);
             // 
-            // invoiceNumberTextBox
-            // 
-            this.invoiceNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "InvoiceNumber", true));
-            this.invoiceNumberTextBox.Location = new System.Drawing.Point(406, 264);
-            this.invoiceNumberTextBox.Name = "invoiceNumberTextBox";
-            this.invoiceNumberTextBox.ReadOnly = true;
-            this.invoiceNumberTextBox.Size = new System.Drawing.Size(200, 20);
-            this.invoiceNumberTextBox.TabIndex = 73;
-            this.invoiceNumberTextBox.TextChanged += new System.EventHandler(this.invoiceNumberTextBox_TextChanged);
-            // 
             // dateDateTimePicker
             // 
             this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.invoiceBindingSource, "Date", true));
-            this.dateDateTimePicker.Location = new System.Drawing.Point(406, 290);
+            this.dateDateTimePicker.Enabled = false;
+            this.dateDateTimePicker.Location = new System.Drawing.Point(351, 295);
             this.dateDateTimePicker.Name = "dateDateTimePicker";
             this.dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dateDateTimePicker.TabIndex = 75;
@@ -286,67 +274,68 @@ namespace Project_OOP
             // CarLicenseTB
             // 
             this.CarLicenseTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "Car_License", true));
-            this.CarLicenseTB.Location = new System.Drawing.Point(406, 316);
+            this.CarLicenseTB.Location = new System.Drawing.Point(351, 321);
             this.CarLicenseTB.Name = "CarLicenseTB";
             this.CarLicenseTB.ReadOnly = true;
             this.CarLicenseTB.Size = new System.Drawing.Size(200, 20);
             this.CarLicenseTB.TabIndex = 77;
             // 
-            // customeridTB
+            // PayButton
             // 
-            this.customeridTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "Customerid", true));
-            this.customeridTB.Location = new System.Drawing.Point(406, 342);
-            this.customeridTB.Name = "customeridTB";
-            this.customeridTB.Size = new System.Drawing.Size(200, 20);
-            this.customeridTB.TabIndex = 79;
-            // 
-            // Pay
-            // 
-            this.Pay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Pay.ForeColor = System.Drawing.Color.Tomato;
-            this.Pay.Location = new System.Drawing.Point(377, 438);
-            this.Pay.Name = "Pay";
-            this.Pay.Size = new System.Drawing.Size(210, 90);
-            this.Pay.TabIndex = 80;
-            this.Pay.Text = "מעבר לתשלום";
-            this.Pay.UseVisualStyleBackColor = true;
-            this.Pay.Click += new System.EventHandler(this.Pay_Click);
-            // 
-            // PriceLabel
-            // 
-            PriceLabel.AutoSize = true;
-            PriceLabel.Location = new System.Drawing.Point(315, 371);
-            PriceLabel.Name = "PriceLabel";
-            PriceLabel.Size = new System.Drawing.Size(34, 13);
-            PriceLabel.TabIndex = 81;
-            PriceLabel.Text = "Price:";
+            this.PayButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PayButton.ForeColor = System.Drawing.Color.Tomato;
+            this.PayButton.Location = new System.Drawing.Point(325, 431);
+            this.PayButton.Name = "PayButton";
+            this.PayButton.Size = new System.Drawing.Size(210, 90);
+            this.PayButton.TabIndex = 80;
+            this.PayButton.Text = "מעבר לתשלום";
+            this.PayButton.UseVisualStyleBackColor = true;
+            this.PayButton.Click += new System.EventHandler(this.Pay_Click);
             // 
             // PriceTB
             // 
-            this.PriceTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "Customerid", true));
-            this.PriceTB.Location = new System.Drawing.Point(406, 368);
+            this.PriceTB.Location = new System.Drawing.Point(351, 347);
             this.PriceTB.Name = "PriceTB";
             this.PriceTB.ReadOnly = true;
             this.PriceTB.Size = new System.Drawing.Size(200, 20);
             this.PriceTB.TabIndex = 82;
+            // 
+            // invoiceNumberTB
+            // 
+            this.invoiceNumberTB.Location = new System.Drawing.Point(351, 268);
+            this.invoiceNumberTB.Name = "invoiceNumberTB";
+            this.invoiceNumberTB.ReadOnly = true;
+            this.invoiceNumberTB.Size = new System.Drawing.Size(200, 20);
+            this.invoiceNumberTB.TabIndex = 79;
+            // 
+            // ReturnButton
+            // 
+            this.ReturnButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ReturnButton.ForeColor = System.Drawing.Color.Tomato;
+            this.ReturnButton.Location = new System.Drawing.Point(12, 53);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(94, 40);
+            this.ReturnButton.TabIndex = 83;
+            this.ReturnButton.Text = "חזרה";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
             // Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 631);
+            this.ClientSize = new System.Drawing.Size(843, 561);
+            this.Controls.Add(this.ReturnButton);
             this.Controls.Add(PriceLabel);
             this.Controls.Add(this.PriceTB);
-            this.Controls.Add(this.Pay);
-            this.Controls.Add(invoiceNumberLabel);
-            this.Controls.Add(this.invoiceNumberTextBox);
+            this.Controls.Add(this.PayButton);
             this.Controls.Add(dateLabel);
             this.Controls.Add(this.dateDateTimePicker);
             this.Controls.Add(CarLicenseLabel);
             this.Controls.Add(this.CarLicenseTB);
-            this.Controls.Add(customeridLabel);
-            this.Controls.Add(this.customeridTB);
+            this.Controls.Add(invoiceNumberLabel);
+            this.Controls.Add(this.invoiceNumberTB);
             this.Controls.Add(this.invoiceBindingNavigator);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Invoice";
@@ -383,11 +372,11 @@ namespace Project_OOP
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton invoiceBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox invoiceNumberTextBox;
         private System.Windows.Forms.DateTimePicker dateDateTimePicker;
         private System.Windows.Forms.TextBox CarLicenseTB;
-        private System.Windows.Forms.TextBox customeridTB;
-        private System.Windows.Forms.Button Pay;
+        private System.Windows.Forms.Button PayButton;
         private System.Windows.Forms.TextBox PriceTB;
+        private System.Windows.Forms.TextBox invoiceNumberTB;
+        private System.Windows.Forms.Button ReturnButton;
     }
 }

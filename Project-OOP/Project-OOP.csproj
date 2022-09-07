@@ -73,12 +73,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bikes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bikes.Designer.cs">
-      <DependentUpon>Bikes.cs</DependentUpon>
-    </Compile>
     <Compile Include="BikesClass.cs" />
     <Compile Include="CarsClass.cs" />
     <Compile Include="CreateVehicle.cs">
@@ -86,12 +80,6 @@
     </Compile>
     <Compile Include="CreateVehicle.Designer.cs">
       <DependentUpon>CreateVehicle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseCarRental.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -117,12 +105,6 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="SportCar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SportCar.Designer.cs">
-      <DependentUpon>SportCar.cs</DependentUpon>
-    </Compile>
     <Compile Include="SportsCarsClass.cs" />
     <Compile Include="VehicleClass.cs" />
     <Compile Include="Program.cs" />
@@ -133,14 +115,8 @@
     <Compile Include="VehicleList.Designer.cs">
       <DependentUpon>VehicleList.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Bikes.resx">
-      <DependentUpon>Bikes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CreateVehicle.resx">
       <DependentUpon>CreateVehicle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RentalDisplay.resx">
       <DependentUpon>RentalDisplay.cs</DependentUpon>
@@ -150,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SportCar.resx">
-      <DependentUpon>SportCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -164,7 +164,6 @@ namespace Project_OOP
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarTableAdapter = this.carTableAdapter;
-            this.tableAdapterManager.CustomerTableAdapter = null;
             this.tableAdapterManager.InvoiceTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Project_OOP.DatabaseCarRentalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 

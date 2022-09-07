@@ -119,5 +119,11 @@ namespace Project_OOP
 
             return vehicle;
         }
+
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            new Menu().Show();
+            this.Hide();
+        }
     }
 }

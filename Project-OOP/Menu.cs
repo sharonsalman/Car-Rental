@@ -23,20 +23,6 @@ namespace Project_OOP
             this.Hide();
         }
 
-        private void Invoice_Click(object sender, EventArgs e)
-        {
-/*            Invoice invoiceform = new Invoice();
-            new Invoice().Show();
-            this.Hide();*/
-        }
-
-        private void AddCustomer_Click(object sender, EventArgs e)
-        {
-            Customer customerform = new Customer();
-            new Customer().Show();
-            this.Hide();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

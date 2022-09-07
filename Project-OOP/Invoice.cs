@@ -37,7 +37,7 @@ namespace Project_OOP
 */            
             PriceTB.Text = price.ToString();
             CarLicenseTB.Text = licensePlate.ToString();
-            customeridTB.Text = generateCustomerNumber();
+            invoiceNumberTB.Text = generateCustomerNumber();
         }
 
         private String generateCustomerNumber()
@@ -62,19 +62,30 @@ namespace Project_OOP
 
         }
 
-        private void invoiceNumberTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-            SqlConnection Conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\Database.mdf;Integrated Security=True");
-            SqlCommand Comm1 = new SqlCommand("SELECT COUNT(*) FROM Invoice", Conn);
-            Conn.Open();
-            invoiceNumberTextBox.Text = (string)Comm1.ExecuteScalar();
-            Conn.Close();
-        }
-
         private void Pay_Click(object sender, EventArgs e)
         {
 
+            PayButton.Enabled = false;
+
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\Database.mdf;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("Insert_Invoice_Procedure", conn);
+
+            conn.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@InvoiceNumber", int.Parse(invoiceNumberTB.Text));
+            cmd.Parameters.AddWithValue("@Date", DateTime.Now);
+            cmd.Parameters.AddWithValue("@Car_License", licensePlate);
+            cmd.Parameters.AddWithValue("@Price", price);
+            int i = cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            new Menu().Show();
+            this.Hide();
         }
     }
 }

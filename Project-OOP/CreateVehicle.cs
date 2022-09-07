@@ -42,8 +42,21 @@ namespace Project_OOP
 
         private void Save_Click(object sender, EventArgs e)
         {
-            string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C: \\Users\\Sharon\\Desktop\\לימודים\\מונחה עצמים\\Car - Rental\\Project - OOP\\Database.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(conString);
+            Save.Enabled = false;
+
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\Database.mdf;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("Insert_Invoice_Procedure", conn);
+
+            conn.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@InvoiceNumber", int.Parse(invoiceNumberTB.Text));
+            cmd.Parameters.AddWithValue("@Date", DateTime.Now);
+            cmd.Parameters.AddWithValue("@Car_License", licensePlate);
+            cmd.Parameters.AddWithValue("@Price", price);
+            int i = cmd.ExecuteNonQuery();
+
+            conn.Close();
 
         }
     }

@@ -75,7 +75,6 @@ C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\bin\Debug\EntityFramework.SqlServ
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project-OOP.csproj.AssemblyReference.cache
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project_OOP.Bikes.resources
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project_OOP.CreateVehicle.resources
-C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project_OOP.Customer.resources
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project_OOP.Invoice.resources
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project_OOP.Menu.resources
 C:\Users\Sharon\Desktop\Car-Rental\Project-OOP\obj\Debug\Project_OOP.SportCar.resources

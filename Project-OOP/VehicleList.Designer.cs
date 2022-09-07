@@ -39,6 +39,7 @@ namespace Project_OOP
             this.carTableAdapter = new Project_OOP.DatabaseCarRentalTableAdapters.CarTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ReturnButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.databaseCarRental)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseCarRentalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
@@ -87,12 +88,25 @@ namespace Project_OOP
             this.carBindingSource1.DataMember = "Car";
             this.carBindingSource1.DataSource = this.databaseCarRentalBindingSource;
             // 
+            // ReturnButton
+            // 
+            this.ReturnButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ReturnButton.ForeColor = System.Drawing.Color.Tomato;
+            this.ReturnButton.Location = new System.Drawing.Point(422, 510);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(174, 40);
+            this.ReturnButton.TabIndex = 84;
+            this.ReturnButton.Text = "חזרה לתפריט הראשי";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
+            // 
             // VehicleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 631);
+            this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "VehicleList";
             this.Text = "VehicleList";
@@ -118,5 +132,6 @@ namespace Project_OOP
         private DatabaseCarRentalTableAdapters.CarTableAdapter carTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource carBindingSource1;
+        private Button ReturnButton;
     }
 }
