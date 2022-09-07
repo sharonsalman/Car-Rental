@@ -64,6 +64,7 @@ namespace Project_OOP
                     cmd.Parameters.AddWithValue("@Doors", int.Parse(doorsTextBox.Text));
                     cmd.Parameters.AddWithValue("@Seats", int.Parse(seatsTextBox.Text));
                     cmd.Parameters.AddWithValue("@Storage", int.Parse(storageTextBox.Text));
+                    cmd.Parameters.AddWithValue("@FuelPerKM", int.Parse(fuelPerKMTextBox.Text));
                     break;
                 case "Sport":
                     cmd.Parameters.AddWithValue("@Doors", int.Parse(doorsTextBox.Text));
