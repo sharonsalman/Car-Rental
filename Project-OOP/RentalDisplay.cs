@@ -12,7 +12,6 @@ namespace Project_OOP
 {
     public partial class RentalDisplay : Form
     {
-        int price = 0;
         Object vehicle;
         String type;
         public RentalDisplay(Object vehicle, String type)
@@ -59,6 +58,8 @@ namespace Project_OOP
                     LoadCarDataToTextBox();
                     SportsCarsClass vehicle = (SportsCarsClass)this.vehicle;
                     MaxSpeedTB.Text = vehicle.MaxSpeed.ToString();
+                    fuelPerKMTB.Visible = !fuelPerKMTB.Visible;
+                    fuelPerKMLabel.Visible = !fuelPerKMLabel.Visible;
 
                     break;
                 case "Motorbike":
@@ -69,6 +70,9 @@ namespace Project_OOP
                     StorageLabel.Visible = !StorageLabel.Visible;
                     SeatsTB.Visible = !SeatsTB.Visible;
                     SeatsLabel.Visible = !SeatsLabel.Visible;
+                    fuelPerKMTB.Visible = !fuelPerKMTB.Visible;
+                    fuelPerKMLabel.Visible = !fuelPerKMLabel.Visible;
+
                     break;
                 default:
                     break;
@@ -90,6 +94,8 @@ namespace Project_OOP
             SeatsTB.Text = vehicle.Seats.ToString();
             DistanceTB.Text = vehicle.Distance.ToString();
             StorageTB.Text = vehicle.Storage.ToString();
+            fuelPerKMTB.Text = vehicle.Storage.ToString();
+            
         }
 
         private void LoadDefaultDataToTextBox()

@@ -62,6 +62,9 @@ namespace Project_OOP
             this.SeatsLabel = new System.Windows.Forms.Label();
             this.StorageTB = new System.Windows.Forms.TextBox();
             this.StorageLabel = new System.Windows.Forms.Label();
+            this.fuelPerKMTB = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.fuelPerKMLabel = new System.Windows.Forms.Label();
             licensePlateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseCarRental)).BeginInit();
@@ -79,7 +82,7 @@ namespace Project_OOP
             // 
             // DoorsTB
             // 
-            this.DoorsTB.Location = new System.Drawing.Point(106, 289);
+            this.DoorsTB.Location = new System.Drawing.Point(107, 244);
             this.DoorsTB.Name = "DoorsTB";
             this.DoorsTB.ReadOnly = true;
             this.DoorsTB.Size = new System.Drawing.Size(138, 20);
@@ -88,9 +91,9 @@ namespace Project_OOP
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(373, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(384, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(347, 312);
+            this.pictureBox1.Size = new System.Drawing.Size(336, 285);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
@@ -99,7 +102,7 @@ namespace Project_OOP
             // DoorsLabel
             // 
             this.DoorsLabel.AutoSize = true;
-            this.DoorsLabel.Location = new System.Drawing.Point(27, 289);
+            this.DoorsLabel.Location = new System.Drawing.Point(27, 247);
             this.DoorsLabel.Name = "DoorsLabel";
             this.DoorsLabel.Size = new System.Drawing.Size(38, 13);
             this.DoorsLabel.TabIndex = 54;
@@ -116,7 +119,7 @@ namespace Project_OOP
             // 
             // MaxSpeedTB
             // 
-            this.MaxSpeedTB.Location = new System.Drawing.Point(106, 250);
+            this.MaxSpeedTB.Location = new System.Drawing.Point(107, 368);
             this.MaxSpeedTB.Name = "MaxSpeedTB";
             this.MaxSpeedTB.ReadOnly = true;
             this.MaxSpeedTB.Size = new System.Drawing.Size(138, 20);
@@ -124,7 +127,7 @@ namespace Project_OOP
             // 
             // DistanceTB
             // 
-            this.DistanceTB.Location = new System.Drawing.Point(106, 219);
+            this.DistanceTB.Location = new System.Drawing.Point(107, 213);
             this.DistanceTB.Name = "DistanceTB";
             this.DistanceTB.ReadOnly = true;
             this.DistanceTB.Size = new System.Drawing.Size(138, 20);
@@ -132,7 +135,7 @@ namespace Project_OOP
             // 
             // SafetyTB
             // 
-            this.SafetyTB.Location = new System.Drawing.Point(106, 189);
+            this.SafetyTB.Location = new System.Drawing.Point(107, 182);
             this.SafetyTB.Name = "SafetyTB";
             this.SafetyTB.ReadOnly = true;
             this.SafetyTB.Size = new System.Drawing.Size(138, 20);
@@ -140,7 +143,7 @@ namespace Project_OOP
             // 
             // ColorTB
             // 
-            this.ColorTB.Location = new System.Drawing.Point(106, 157);
+            this.ColorTB.Location = new System.Drawing.Point(107, 151);
             this.ColorTB.Name = "ColorTB";
             this.ColorTB.ReadOnly = true;
             this.ColorTB.Size = new System.Drawing.Size(138, 20);
@@ -148,7 +151,7 @@ namespace Project_OOP
             // 
             // YearTB
             // 
-            this.YearTB.Location = new System.Drawing.Point(106, 122);
+            this.YearTB.Location = new System.Drawing.Point(107, 120);
             this.YearTB.Name = "YearTB";
             this.YearTB.ReadOnly = true;
             this.YearTB.Size = new System.Drawing.Size(138, 20);
@@ -156,7 +159,7 @@ namespace Project_OOP
             // 
             // ModelTB
             // 
-            this.ModelTB.Location = new System.Drawing.Point(106, 91);
+            this.ModelTB.Location = new System.Drawing.Point(107, 89);
             this.ModelTB.Name = "ModelTB";
             this.ModelTB.ReadOnly = true;
             this.ModelTB.Size = new System.Drawing.Size(138, 20);
@@ -164,7 +167,7 @@ namespace Project_OOP
             // 
             // CompanyTB
             // 
-            this.CompanyTB.Location = new System.Drawing.Point(106, 58);
+            this.CompanyTB.Location = new System.Drawing.Point(107, 58);
             this.CompanyTB.Name = "CompanyTB";
             this.CompanyTB.ReadOnly = true;
             this.CompanyTB.Size = new System.Drawing.Size(138, 20);
@@ -182,7 +185,7 @@ namespace Project_OOP
             // MaxSpeedLabel
             // 
             this.MaxSpeedLabel.AutoSize = true;
-            this.MaxSpeedLabel.Location = new System.Drawing.Point(27, 253);
+            this.MaxSpeedLabel.Location = new System.Drawing.Point(27, 371);
             this.MaxSpeedLabel.Name = "MaxSpeedLabel";
             this.MaxSpeedLabel.Size = new System.Drawing.Size(64, 13);
             this.MaxSpeedLabel.TabIndex = 44;
@@ -191,7 +194,7 @@ namespace Project_OOP
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 219);
+            this.label6.Location = new System.Drawing.Point(27, 216);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 43;
@@ -209,7 +212,7 @@ namespace Project_OOP
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 192);
+            this.label4.Location = new System.Drawing.Point(27, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 41;
@@ -218,7 +221,7 @@ namespace Project_OOP
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 157);
+            this.label3.Location = new System.Drawing.Point(27, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 40;
@@ -227,7 +230,7 @@ namespace Project_OOP
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 122);
+            this.label2.Location = new System.Drawing.Point(27, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 39;
@@ -236,7 +239,7 @@ namespace Project_OOP
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 91);
+            this.label1.Location = new System.Drawing.Point(27, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 38;
@@ -298,7 +301,7 @@ namespace Project_OOP
             // 
             // SeatsTB
             // 
-            this.SeatsTB.Location = new System.Drawing.Point(107, 327);
+            this.SeatsTB.Location = new System.Drawing.Point(107, 275);
             this.SeatsTB.Name = "SeatsTB";
             this.SeatsTB.ReadOnly = true;
             this.SeatsTB.Size = new System.Drawing.Size(138, 20);
@@ -310,7 +313,7 @@ namespace Project_OOP
             this.SeatsLabel.AutoSize = true;
             this.SeatsLabel.BackColor = System.Drawing.Color.White;
             this.SeatsLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SeatsLabel.Location = new System.Drawing.Point(28, 327);
+            this.SeatsLabel.Location = new System.Drawing.Point(27, 278);
             this.SeatsLabel.Name = "SeatsLabel";
             this.SeatsLabel.Size = new System.Drawing.Size(37, 13);
             this.SeatsLabel.TabIndex = 64;
@@ -319,7 +322,7 @@ namespace Project_OOP
             // 
             // StorageTB
             // 
-            this.StorageTB.Location = new System.Drawing.Point(107, 359);
+            this.StorageTB.Location = new System.Drawing.Point(107, 306);
             this.StorageTB.Name = "StorageTB";
             this.StorageTB.ReadOnly = true;
             this.StorageTB.Size = new System.Drawing.Size(138, 20);
@@ -330,11 +333,38 @@ namespace Project_OOP
             this.StorageLabel.AutoSize = true;
             this.StorageLabel.BackColor = System.Drawing.Color.White;
             this.StorageLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.StorageLabel.Location = new System.Drawing.Point(28, 359);
+            this.StorageLabel.Location = new System.Drawing.Point(27, 309);
             this.StorageLabel.Name = "StorageLabel";
             this.StorageLabel.Size = new System.Drawing.Size(47, 13);
             this.StorageLabel.TabIndex = 66;
             this.StorageLabel.Text = "Storage:";
+            // 
+            // fuelPerKMTB
+            // 
+            this.fuelPerKMTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "FuelPerKM", true));
+            this.fuelPerKMTB.Location = new System.Drawing.Point(107, 337);
+            this.fuelPerKMTB.Name = "fuelPerKMTB";
+            this.fuelPerKMTB.ReadOnly = true;
+            this.fuelPerKMTB.Size = new System.Drawing.Size(138, 20);
+            this.fuelPerKMTB.TabIndex = 68;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 69;
+            this.label7.Text = "label7";
+            // 
+            // fuelPerKMLabel
+            // 
+            this.fuelPerKMLabel.AutoSize = true;
+            this.fuelPerKMLabel.Location = new System.Drawing.Point(27, 340);
+            this.fuelPerKMLabel.Name = "fuelPerKMLabel";
+            this.fuelPerKMLabel.Size = new System.Drawing.Size(68, 13);
+            this.fuelPerKMLabel.TabIndex = 70;
+            this.fuelPerKMLabel.Text = "Fuel Per KM:";
             // 
             // RentalDisplay
             // 
@@ -342,6 +372,9 @@ namespace Project_OOP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fuelPerKMLabel);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.fuelPerKMTB);
             this.Controls.Add(this.StorageTB);
             this.Controls.Add(this.StorageLabel);
             this.Controls.Add(this.SeatsTB);
@@ -370,7 +403,7 @@ namespace Project_OOP
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RentalDisplay";
-            this.Text = "FamilyCar";
+            this.Text = "Rental";
             this.Load += new System.EventHandler(this.FamilyCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseCarRental)).EndInit();
@@ -412,5 +445,8 @@ namespace Project_OOP
         private System.Windows.Forms.Label SeatsLabel;
         private System.Windows.Forms.TextBox StorageTB;
         private System.Windows.Forms.Label StorageLabel;
+        private System.Windows.Forms.TextBox fuelPerKMTB;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label fuelPerKMLabel;
     }
 }
