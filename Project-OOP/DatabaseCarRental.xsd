@@ -104,13 +104,13 @@ SELECT InvoiceNumber, Date, Car_License, Price FROM Invoice WHERE (InvoiceNumber
   <xs:element name="DatabaseCarRental" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DatabaseCarRental" msprop:Generator_UserDSName="DatabaseCarRental">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Car" msprop:Generator_TableClassName="CarDataTable" msprop:Generator_TableVarName="tableCar" msprop:Generator_TablePropName="Car" msprop:Generator_RowDeletingName="CarRowDeleting" msprop:Generator_RowChangingName="CarRowChanging" msprop:Generator_RowEvHandlerName="CarRowChangeEventHandler" msprop:Generator_RowDeletedName="CarRowDeleted" msprop:Generator_UserTableName="Car" msprop:Generator_RowChangedName="CarRowChanged" msprop:Generator_RowEvArgName="CarRowChangeEvent" msprop:Generator_RowClassName="CarRow">
+        <xs:element name="Car" msprop:Generator_TableClassName="CarDataTable" msprop:Generator_TableVarName="tableCar" msprop:Generator_RowChangedName="CarRowChanged" msprop:Generator_TablePropName="Car" msprop:Generator_RowDeletingName="CarRowDeleting" msprop:Generator_RowChangingName="CarRowChanging" msprop:Generator_RowEvHandlerName="CarRowChangeEventHandler" msprop:Generator_RowDeletedName="CarRowDeleted" msprop:Generator_RowClassName="CarRow" msprop:Generator_UserTableName="Car" msprop:Generator_RowEvArgName="CarRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LicensePlate" msprop:Generator_ColumnVarNameInTable="columnLicensePlate" msprop:Generator_ColumnPropNameInRow="LicensePlate" msprop:Generator_ColumnPropNameInTable="LicensePlateColumn" msprop:Generator_UserColumnName="LicensePlate">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="8" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -155,7 +155,7 @@ SELECT InvoiceNumber, Date, Car_License, Price FROM Invoice WHERE (InvoiceNumber
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Invoice" msprop:Generator_TableClassName="InvoiceDataTable" msprop:Generator_TableVarName="tableInvoice" msprop:Generator_TablePropName="Invoice" msprop:Generator_RowDeletingName="InvoiceRowDeleting" msprop:Generator_RowChangingName="InvoiceRowChanging" msprop:Generator_RowEvHandlerName="InvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceRowDeleted" msprop:Generator_UserTableName="Invoice" msprop:Generator_RowChangedName="InvoiceRowChanged" msprop:Generator_RowEvArgName="InvoiceRowChangeEvent" msprop:Generator_RowClassName="InvoiceRow">
+        <xs:element name="Invoice" msprop:Generator_TableClassName="InvoiceDataTable" msprop:Generator_TableVarName="tableInvoice" msprop:Generator_RowChangedName="InvoiceRowChanged" msprop:Generator_TablePropName="Invoice" msprop:Generator_RowDeletingName="InvoiceRowDeleting" msprop:Generator_RowChangingName="InvoiceRowChanging" msprop:Generator_RowEvHandlerName="InvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceRowDeleted" msprop:Generator_RowClassName="InvoiceRow" msprop:Generator_UserTableName="Invoice" msprop:Generator_RowEvArgName="InvoiceRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="InvoiceNumber" msprop:Generator_ColumnVarNameInTable="columnInvoiceNumber" msprop:Generator_ColumnPropNameInRow="InvoiceNumber" msprop:Generator_ColumnPropNameInTable="InvoiceNumberColumn" msprop:Generator_UserColumnName="InvoiceNumber" type="xs:int" />

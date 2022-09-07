@@ -637,7 +637,7 @@ namespace Project_OOP {
                                 this.columnLicensePlate1}, false));
                 this.columnLicensePlate.AllowDBNull = false;
                 this.columnLicensePlate.Unique = true;
-                this.columnLicensePlate.MaxLength = 10;
+                this.columnLicensePlate.MaxLength = 8;
                 this.columnVehicleName.AllowDBNull = false;
                 this.columnVehicleName.MaxLength = 2147483647;
                 this.columnColor.AllowDBNull = false;
@@ -2064,9 +2064,7 @@ SELECT InvoiceNumber, Date, Car_License, Price FROM Invoice WHERE (InvoiceNumber
                 return count;
             }
         }
-
-        public CarTableAdapter CarTableAdapter { get; internal set; }
-
+        
         /// <summary>
         ///Update rows in top-down order.
         ///</summary>

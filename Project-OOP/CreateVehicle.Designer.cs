@@ -30,7 +30,6 @@ namespace Project_OOP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateVehicle));
             System.Windows.Forms.Label licensePlateLabel;
             System.Windows.Forms.Label vehicleNameLabel;
             System.Windows.Forms.Label colorLabel;
@@ -45,6 +44,7 @@ namespace Project_OOP
             System.Windows.Forms.Label maxSpeedLabel;
             System.Windows.Forms.Label fuelPerKMLabel;
             System.Windows.Forms.Label typeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateVehicle));
             this.Delete = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.BackMenu = new System.Windows.Forms.Button();
@@ -54,17 +54,17 @@ namespace Project_OOP
             this.carTableAdapter = new Project_OOP.DatabaseCarRentalTableAdapters.CarTableAdapter();
             this.tableAdapterManager = new Project_OOP.DatabaseCarRentalTableAdapters.TableAdapterManager();
             this.carBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.carBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.licensePlateTextBox = new System.Windows.Forms.TextBox();
             this.vehicleNameTextBox = new System.Windows.Forms.TextBox();
@@ -79,7 +79,7 @@ namespace Project_OOP
             this.storageTextBox = new System.Windows.Forms.TextBox();
             this.maxSpeedTextBox = new System.Windows.Forms.TextBox();
             this.fuelPerKMTextBox = new System.Windows.Forms.TextBox();
-            this.typeTextBox = new System.Windows.Forms.TextBox();
+            this.TypeCB = new System.Windows.Forms.ComboBox();
             licensePlateLabel = new System.Windows.Forms.Label();
             vehicleNameLabel = new System.Windows.Forms.Label();
             colorLabel = new System.Windows.Forms.Label();
@@ -100,6 +100,132 @@ namespace Project_OOP
             ((System.ComponentModel.ISupportInitialize)(this.carBindingNavigator)).BeginInit();
             this.carBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // licensePlateLabel
+            // 
+            licensePlateLabel.AutoSize = true;
+            licensePlateLabel.Location = new System.Drawing.Point(36, 222);
+            licensePlateLabel.Name = "licensePlateLabel";
+            licensePlateLabel.Size = new System.Drawing.Size(74, 13);
+            licensePlateLabel.TabIndex = 8;
+            licensePlateLabel.Text = "License Plate:";
+            // 
+            // vehicleNameLabel
+            // 
+            vehicleNameLabel.AutoSize = true;
+            vehicleNameLabel.Location = new System.Drawing.Point(36, 248);
+            vehicleNameLabel.Name = "vehicleNameLabel";
+            vehicleNameLabel.Size = new System.Drawing.Size(76, 13);
+            vehicleNameLabel.TabIndex = 10;
+            vehicleNameLabel.Text = "Vehicle Name:";
+            // 
+            // colorLabel
+            // 
+            colorLabel.AutoSize = true;
+            colorLabel.Location = new System.Drawing.Point(36, 274);
+            colorLabel.Name = "colorLabel";
+            colorLabel.Size = new System.Drawing.Size(34, 13);
+            colorLabel.TabIndex = 12;
+            colorLabel.Text = "Color:";
+            // 
+            // companyNameLabel
+            // 
+            companyNameLabel.AutoSize = true;
+            companyNameLabel.Location = new System.Drawing.Point(36, 300);
+            companyNameLabel.Name = "companyNameLabel";
+            companyNameLabel.Size = new System.Drawing.Size(85, 13);
+            companyNameLabel.TabIndex = 14;
+            companyNameLabel.Text = "Company Name:";
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new System.Drawing.Point(36, 326);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new System.Drawing.Size(34, 13);
+            priceLabel.TabIndex = 16;
+            priceLabel.Text = "Price:";
+            // 
+            // safetyLabel
+            // 
+            safetyLabel.AutoSize = true;
+            safetyLabel.Location = new System.Drawing.Point(36, 352);
+            safetyLabel.Name = "safetyLabel";
+            safetyLabel.Size = new System.Drawing.Size(40, 13);
+            safetyLabel.TabIndex = 18;
+            safetyLabel.Text = "Safety:";
+            // 
+            // distanceLabel
+            // 
+            distanceLabel.AutoSize = true;
+            distanceLabel.Location = new System.Drawing.Point(36, 378);
+            distanceLabel.Name = "distanceLabel";
+            distanceLabel.Size = new System.Drawing.Size(52, 13);
+            distanceLabel.TabIndex = 20;
+            distanceLabel.Text = "Distance:";
+            // 
+            // yearLabel
+            // 
+            yearLabel.AutoSize = true;
+            yearLabel.Location = new System.Drawing.Point(36, 404);
+            yearLabel.Name = "yearLabel";
+            yearLabel.Size = new System.Drawing.Size(32, 13);
+            yearLabel.TabIndex = 22;
+            yearLabel.Text = "Year:";
+            // 
+            // doorsLabel
+            // 
+            doorsLabel.AutoSize = true;
+            doorsLabel.Location = new System.Drawing.Point(526, 245);
+            doorsLabel.Name = "doorsLabel";
+            doorsLabel.Size = new System.Drawing.Size(38, 13);
+            doorsLabel.TabIndex = 24;
+            doorsLabel.Text = "Doors:";
+            // 
+            // seatsLabel
+            // 
+            seatsLabel.AutoSize = true;
+            seatsLabel.Location = new System.Drawing.Point(526, 271);
+            seatsLabel.Name = "seatsLabel";
+            seatsLabel.Size = new System.Drawing.Size(37, 13);
+            seatsLabel.TabIndex = 26;
+            seatsLabel.Text = "Seats:";
+            // 
+            // storageLabel
+            // 
+            storageLabel.AutoSize = true;
+            storageLabel.Location = new System.Drawing.Point(526, 297);
+            storageLabel.Name = "storageLabel";
+            storageLabel.Size = new System.Drawing.Size(47, 13);
+            storageLabel.TabIndex = 28;
+            storageLabel.Text = "Storage:";
+            // 
+            // maxSpeedLabel
+            // 
+            maxSpeedLabel.AutoSize = true;
+            maxSpeedLabel.Location = new System.Drawing.Point(526, 401);
+            maxSpeedLabel.Name = "maxSpeedLabel";
+            maxSpeedLabel.Size = new System.Drawing.Size(64, 13);
+            maxSpeedLabel.TabIndex = 30;
+            maxSpeedLabel.Text = "Max Speed:";
+            // 
+            // fuelPerKMLabel
+            // 
+            fuelPerKMLabel.AutoSize = true;
+            fuelPerKMLabel.Location = new System.Drawing.Point(526, 326);
+            fuelPerKMLabel.Name = "fuelPerKMLabel";
+            fuelPerKMLabel.Size = new System.Drawing.Size(68, 13);
+            fuelPerKMLabel.TabIndex = 32;
+            fuelPerKMLabel.Text = "Fuel Per KM:";
+            // 
+            // typeLabel
+            // 
+            typeLabel.AutoSize = true;
+            typeLabel.Location = new System.Drawing.Point(36, 432);
+            typeLabel.Name = "typeLabel";
+            typeLabel.Size = new System.Drawing.Size(34, 13);
+            typeLabel.TabIndex = 34;
+            typeLabel.Text = "Type:";
             // 
             // Delete
             // 
@@ -163,7 +289,7 @@ namespace Project_OOP
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CarTableAdapter = this.carTableAdapter;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.InvoiceTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Project_OOP.DatabaseCarRentalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -196,6 +322,31 @@ namespace Project_OOP
             this.carBindingNavigator.Size = new System.Drawing.Size(984, 25);
             this.carBindingNavigator.TabIndex = 8;
             this.carBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -230,16 +381,9 @@ namespace Project_OOP
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -262,26 +406,8 @@ namespace Project_OOP
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // carBindingNavigatorSaveItem
             // 
@@ -292,15 +418,6 @@ namespace Project_OOP
             this.carBindingNavigatorSaveItem.Text = "Save Data";
             this.carBindingNavigatorSaveItem.Click += new System.EventHandler(this.carBindingNavigatorSaveItem_Click);
             // 
-            // licensePlateLabel
-            // 
-            licensePlateLabel.AutoSize = true;
-            licensePlateLabel.Location = new System.Drawing.Point(36, 222);
-            licensePlateLabel.Name = "licensePlateLabel";
-            licensePlateLabel.Size = new System.Drawing.Size(74, 13);
-            licensePlateLabel.TabIndex = 8;
-            licensePlateLabel.Text = "License Plate:";
-            // 
             // licensePlateTextBox
             // 
             this.licensePlateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "LicensePlate", true));
@@ -308,15 +425,6 @@ namespace Project_OOP
             this.licensePlateTextBox.Name = "licensePlateTextBox";
             this.licensePlateTextBox.Size = new System.Drawing.Size(100, 20);
             this.licensePlateTextBox.TabIndex = 9;
-            // 
-            // vehicleNameLabel
-            // 
-            vehicleNameLabel.AutoSize = true;
-            vehicleNameLabel.Location = new System.Drawing.Point(36, 248);
-            vehicleNameLabel.Name = "vehicleNameLabel";
-            vehicleNameLabel.Size = new System.Drawing.Size(76, 13);
-            vehicleNameLabel.TabIndex = 10;
-            vehicleNameLabel.Text = "Vehicle Name:";
             // 
             // vehicleNameTextBox
             // 
@@ -326,31 +434,13 @@ namespace Project_OOP
             this.vehicleNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.vehicleNameTextBox.TabIndex = 11;
             // 
-            // colorLabel
-            // 
-            colorLabel.AutoSize = true;
-            colorLabel.Location = new System.Drawing.Point(36, 274);
-            colorLabel.Name = "colorLabel";
-            colorLabel.Size = new System.Drawing.Size(34, 13);
-            colorLabel.TabIndex = 12;
-            colorLabel.Text = "Color:";
-            // 
             // colorTextBox
             // 
             this.colorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "Color", true));
-            this.colorTextBox.Location = new System.Drawing.Point(127, 271);
+            this.colorTextBox.Location = new System.Drawing.Point(127, 267);
             this.colorTextBox.Name = "colorTextBox";
             this.colorTextBox.Size = new System.Drawing.Size(100, 20);
             this.colorTextBox.TabIndex = 13;
-            // 
-            // companyNameLabel
-            // 
-            companyNameLabel.AutoSize = true;
-            companyNameLabel.Location = new System.Drawing.Point(36, 300);
-            companyNameLabel.Name = "companyNameLabel";
-            companyNameLabel.Size = new System.Drawing.Size(85, 13);
-            companyNameLabel.TabIndex = 14;
-            companyNameLabel.Text = "Company Name:";
             // 
             // companyNameTextBox
             // 
@@ -360,15 +450,6 @@ namespace Project_OOP
             this.companyNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.companyNameTextBox.TabIndex = 15;
             // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Location = new System.Drawing.Point(36, 326);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new System.Drawing.Size(34, 13);
-            priceLabel.TabIndex = 16;
-            priceLabel.Text = "Price:";
-            // 
             // priceTextBox
             // 
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "Price", true));
@@ -376,15 +457,6 @@ namespace Project_OOP
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(100, 20);
             this.priceTextBox.TabIndex = 17;
-            // 
-            // safetyLabel
-            // 
-            safetyLabel.AutoSize = true;
-            safetyLabel.Location = new System.Drawing.Point(36, 352);
-            safetyLabel.Name = "safetyLabel";
-            safetyLabel.Size = new System.Drawing.Size(40, 13);
-            safetyLabel.TabIndex = 18;
-            safetyLabel.Text = "Safety:";
             // 
             // safetyTextBox
             // 
@@ -394,15 +466,6 @@ namespace Project_OOP
             this.safetyTextBox.Size = new System.Drawing.Size(100, 20);
             this.safetyTextBox.TabIndex = 19;
             // 
-            // distanceLabel
-            // 
-            distanceLabel.AutoSize = true;
-            distanceLabel.Location = new System.Drawing.Point(36, 378);
-            distanceLabel.Name = "distanceLabel";
-            distanceLabel.Size = new System.Drawing.Size(52, 13);
-            distanceLabel.TabIndex = 20;
-            distanceLabel.Text = "Distance:";
-            // 
             // distanceTextBox
             // 
             this.distanceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "Distance", true));
@@ -410,15 +473,6 @@ namespace Project_OOP
             this.distanceTextBox.Name = "distanceTextBox";
             this.distanceTextBox.Size = new System.Drawing.Size(100, 20);
             this.distanceTextBox.TabIndex = 21;
-            // 
-            // yearLabel
-            // 
-            yearLabel.AutoSize = true;
-            yearLabel.Location = new System.Drawing.Point(36, 404);
-            yearLabel.Name = "yearLabel";
-            yearLabel.Size = new System.Drawing.Size(32, 13);
-            yearLabel.TabIndex = 22;
-            yearLabel.Text = "Year:";
             // 
             // yearTextBox
             // 
@@ -428,15 +482,6 @@ namespace Project_OOP
             this.yearTextBox.Size = new System.Drawing.Size(100, 20);
             this.yearTextBox.TabIndex = 23;
             // 
-            // doorsLabel
-            // 
-            doorsLabel.AutoSize = true;
-            doorsLabel.Location = new System.Drawing.Point(526, 245);
-            doorsLabel.Name = "doorsLabel";
-            doorsLabel.Size = new System.Drawing.Size(38, 13);
-            doorsLabel.TabIndex = 24;
-            doorsLabel.Text = "Doors:";
-            // 
             // doorsTextBox
             // 
             this.doorsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "Doors", true));
@@ -444,15 +489,6 @@ namespace Project_OOP
             this.doorsTextBox.Name = "doorsTextBox";
             this.doorsTextBox.Size = new System.Drawing.Size(100, 20);
             this.doorsTextBox.TabIndex = 25;
-            // 
-            // seatsLabel
-            // 
-            seatsLabel.AutoSize = true;
-            seatsLabel.Location = new System.Drawing.Point(526, 271);
-            seatsLabel.Name = "seatsLabel";
-            seatsLabel.Size = new System.Drawing.Size(37, 13);
-            seatsLabel.TabIndex = 26;
-            seatsLabel.Text = "Seats:";
             // 
             // seatsTextBox
             // 
@@ -462,15 +498,6 @@ namespace Project_OOP
             this.seatsTextBox.Size = new System.Drawing.Size(100, 20);
             this.seatsTextBox.TabIndex = 27;
             // 
-            // storageLabel
-            // 
-            storageLabel.AutoSize = true;
-            storageLabel.Location = new System.Drawing.Point(526, 297);
-            storageLabel.Name = "storageLabel";
-            storageLabel.Size = new System.Drawing.Size(47, 13);
-            storageLabel.TabIndex = 28;
-            storageLabel.Text = "Storage:";
-            // 
             // storageTextBox
             // 
             this.storageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "Storage", true));
@@ -478,15 +505,6 @@ namespace Project_OOP
             this.storageTextBox.Name = "storageTextBox";
             this.storageTextBox.Size = new System.Drawing.Size(100, 20);
             this.storageTextBox.TabIndex = 29;
-            // 
-            // maxSpeedLabel
-            // 
-            maxSpeedLabel.AutoSize = true;
-            maxSpeedLabel.Location = new System.Drawing.Point(526, 401);
-            maxSpeedLabel.Name = "maxSpeedLabel";
-            maxSpeedLabel.Size = new System.Drawing.Size(64, 13);
-            maxSpeedLabel.TabIndex = 30;
-            maxSpeedLabel.Text = "Max Speed:";
             // 
             // maxSpeedTextBox
             // 
@@ -496,15 +514,6 @@ namespace Project_OOP
             this.maxSpeedTextBox.Size = new System.Drawing.Size(100, 20);
             this.maxSpeedTextBox.TabIndex = 31;
             // 
-            // fuelPerKMLabel
-            // 
-            fuelPerKMLabel.AutoSize = true;
-            fuelPerKMLabel.Location = new System.Drawing.Point(526, 326);
-            fuelPerKMLabel.Name = "fuelPerKMLabel";
-            fuelPerKMLabel.Size = new System.Drawing.Size(68, 13);
-            fuelPerKMLabel.TabIndex = 32;
-            fuelPerKMLabel.Text = "Fuel Per KM:";
-            // 
             // fuelPerKMTextBox
             // 
             this.fuelPerKMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "FuelPerKM", true));
@@ -513,22 +522,17 @@ namespace Project_OOP
             this.fuelPerKMTextBox.Size = new System.Drawing.Size(100, 20);
             this.fuelPerKMTextBox.TabIndex = 33;
             // 
-            // typeLabel
+            // TypeCB
             // 
-            typeLabel.AutoSize = true;
-            typeLabel.Location = new System.Drawing.Point(36, 432);
-            typeLabel.Name = "typeLabel";
-            typeLabel.Size = new System.Drawing.Size(34, 13);
-            typeLabel.TabIndex = 34;
-            typeLabel.Text = "Type:";
-            // 
-            // typeTextBox
-            // 
-            this.typeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "Type", true));
-            this.typeTextBox.Location = new System.Drawing.Point(127, 429);
-            this.typeTextBox.Name = "typeTextBox";
-            this.typeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.typeTextBox.TabIndex = 35;
+            this.TypeCB.FormattingEnabled = true;
+            this.TypeCB.Items.AddRange(new object[] {
+            "Family",
+            "Sport",
+            "Motorbike"});
+            this.TypeCB.Location = new System.Drawing.Point(127, 429);
+            this.TypeCB.Name = "TypeCB";
+            this.TypeCB.Size = new System.Drawing.Size(100, 21);
+            this.TypeCB.TabIndex = 35;
             // 
             // CreateVehicle
             // 
@@ -536,6 +540,7 @@ namespace Project_OOP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 631);
+            this.Controls.Add(this.TypeCB);
             this.Controls.Add(licensePlateLabel);
             this.Controls.Add(this.licensePlateTextBox);
             this.Controls.Add(vehicleNameLabel);
@@ -563,7 +568,6 @@ namespace Project_OOP
             this.Controls.Add(fuelPerKMLabel);
             this.Controls.Add(this.fuelPerKMTextBox);
             this.Controls.Add(typeLabel);
-            this.Controls.Add(this.typeTextBox);
             this.Controls.Add(this.carBindingNavigator);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Save);
@@ -619,6 +623,6 @@ namespace Project_OOP
         private System.Windows.Forms.TextBox storageTextBox;
         private System.Windows.Forms.TextBox maxSpeedTextBox;
         private System.Windows.Forms.TextBox fuelPerKMTextBox;
-        private System.Windows.Forms.TextBox typeTextBox;
+        private System.Windows.Forms.ComboBox TypeCB;
     }
 }
