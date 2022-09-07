@@ -105,6 +105,12 @@
       <DependentUpon>FamilyCar.cs</DependentUpon>
     </Compile>
     <Compile Include="FamilyCarsClass.cs" />
+    <Compile Include="Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     <Compile Include="VehicleClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleList.Designer.cs">
+      <DependentUpon>VehicleList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bikes.resx">
       <DependentUpon>Bikes.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FamilyCar.resx">
       <DependentUpon>FamilyCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -148,6 +163,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VehicleList.resx">
+      <DependentUpon>VehicleList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DatabaseCarRental.xsc">
       <DependentUpon>DatabaseCarRental.xsd</DependentUpon>
     </None>

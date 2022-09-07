@@ -29,7 +29,9 @@ namespace Project_OOP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FamilyCar));
+            System.Windows.Forms.Label licensePlateLabel;
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,9 +51,33 @@ namespace Project_OOP
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.kidseat = new System.Windows.Forms.RadioButton();
             this.kidseatsnum = new System.Windows.Forms.ComboBox();
+            this.kidseat = new System.Windows.Forms.CheckBox();
+            this.databaseCarRental = new Project_OOP.DatabaseCarRental();
+            this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.carTableAdapter = new Project_OOP.DatabaseCarRentalTableAdapters.CarTableAdapter();
+            this.tableAdapterManager = new Project_OOP.DatabaseCarRentalTableAdapters.TableAdapterManager();
+            this.carBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.carBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.licensePlateTextBox = new System.Windows.Forms.TextBox();
+            this.AddtoInvoice = new System.Windows.Forms.Button();
+            licensePlateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseCarRental)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingNavigator)).BeginInit();
+            this.carBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox9
@@ -87,6 +113,7 @@ namespace Project_OOP
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 53;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox7
             // 
@@ -209,18 +236,6 @@ namespace Project_OOP
             this.label1.TabIndex = 38;
             this.label1.Text = "Model:";
             // 
-            // kidseat
-            // 
-            this.kidseat.AutoSize = true;
-            this.kidseat.Location = new System.Drawing.Point(32, 349);
-            this.kidseat.Name = "kidseat";
-            this.kidseat.Size = new System.Drawing.Size(65, 17);
-            this.kidseat.TabIndex = 57;
-            this.kidseat.TabStop = true;
-            this.kidseat.Text = "Kid Seat";
-            this.kidseat.UseVisualStyleBackColor = true;
-            this.kidseat.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // kidseatsnum
             // 
             this.kidseatsnum.Enabled = false;
@@ -234,14 +249,206 @@ namespace Project_OOP
             this.kidseatsnum.Name = "kidseatsnum";
             this.kidseatsnum.Size = new System.Drawing.Size(68, 21);
             this.kidseatsnum.TabIndex = 58;
+            this.kidseatsnum.SelectedIndexChanged += new System.EventHandler(this.kidseatsnum_SelectedIndexChanged);
+            // 
+            // kidseat
+            // 
+            this.kidseat.AutoSize = true;
+            this.kidseat.Location = new System.Drawing.Point(27, 350);
+            this.kidseat.Name = "kidseat";
+            this.kidseat.Size = new System.Drawing.Size(66, 17);
+            this.kidseat.TabIndex = 59;
+            this.kidseat.Text = "Kid Seat";
+            this.kidseat.UseVisualStyleBackColor = true;
+            this.kidseat.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // databaseCarRental
+            // 
+            this.databaseCarRental.DataSetName = "DatabaseCarRental";
+            this.databaseCarRental.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // carBindingSource
+            // 
+            this.carBindingSource.DataMember = "Car";
+            this.carBindingSource.DataSource = this.databaseCarRental;
+            // 
+            // carTableAdapter
+            // 
+            this.carTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CarTableAdapter = this.carTableAdapter;
+            this.tableAdapterManager.CustomerTableAdapter = null;
+            this.tableAdapterManager.InvoiceTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Project_OOP.DatabaseCarRentalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // carBindingNavigator
+            // 
+            this.carBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.carBindingNavigator.BindingSource = this.carBindingSource;
+            this.carBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.carBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.carBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.carBindingNavigatorSaveItem});
+            this.carBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.carBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.carBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.carBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.carBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.carBindingNavigator.Name = "carBindingNavigator";
+            this.carBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.carBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.carBindingNavigator.TabIndex = 60;
+            this.carBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // carBindingNavigatorSaveItem
+            // 
+            this.carBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.carBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("carBindingNavigatorSaveItem.Image")));
+            this.carBindingNavigatorSaveItem.Name = "carBindingNavigatorSaveItem";
+            this.carBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.carBindingNavigatorSaveItem.Text = "Save Data";
+            this.carBindingNavigatorSaveItem.Click += new System.EventHandler(this.carBindingNavigatorSaveItem_Click);
+            // 
+            // licensePlateLabel
+            // 
+            licensePlateLabel.AutoSize = true;
+            licensePlateLabel.Location = new System.Drawing.Point(29, 55);
+            licensePlateLabel.Name = "licensePlateLabel";
+            licensePlateLabel.Size = new System.Drawing.Size(74, 13);
+            licensePlateLabel.TabIndex = 60;
+            licensePlateLabel.Text = "License Plate:";
+            // 
+            // licensePlateTextBox
+            // 
+            this.licensePlateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.carBindingSource, "LicensePlate", true));
+            this.licensePlateTextBox.Location = new System.Drawing.Point(109, 52);
+            this.licensePlateTextBox.Name = "licensePlateTextBox";
+            this.licensePlateTextBox.Size = new System.Drawing.Size(100, 20);
+            this.licensePlateTextBox.TabIndex = 61;
+            // 
+            // AddtoInvoice
+            // 
+            this.AddtoInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddtoInvoice.ForeColor = System.Drawing.Color.Tomato;
+            this.AddtoInvoice.Location = new System.Drawing.Point(378, 384);
+            this.AddtoInvoice.Name = "AddtoInvoice";
+            this.AddtoInvoice.Size = new System.Drawing.Size(124, 43);
+            this.AddtoInvoice.TabIndex = 62;
+            this.AddtoInvoice.Text = "הוסף להזמנה";
+            this.AddtoInvoice.UseVisualStyleBackColor = true;
             // 
             // FamilyCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.kidseatsnum);
+            this.Controls.Add(this.AddtoInvoice);
+            this.Controls.Add(licensePlateLabel);
+            this.Controls.Add(this.licensePlateTextBox);
+            this.Controls.Add(this.carBindingNavigator);
             this.Controls.Add(this.kidseat);
+            this.Controls.Add(this.kidseatsnum);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
@@ -263,7 +470,13 @@ namespace Project_OOP
             this.Controls.Add(this.label1);
             this.Name = "FamilyCar";
             this.Text = "FamilyCar";
+            this.Load += new System.EventHandler(this.FamilyCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseCarRental)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingNavigator)).EndInit();
+            this.carBindingNavigator.ResumeLayout(false);
+            this.carBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +503,26 @@ namespace Project_OOP
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton kidseat;
         private System.Windows.Forms.ComboBox kidseatsnum;
+        private System.Windows.Forms.CheckBox kidseat;
+        private DatabaseCarRental databaseCarRental;
+        private System.Windows.Forms.BindingSource carBindingSource;
+        private DatabaseCarRentalTableAdapters.CarTableAdapter carTableAdapter;
+        private DatabaseCarRentalTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator carBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton carBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox licensePlateTextBox;
+        private System.Windows.Forms.Button AddtoInvoice;
     }
 }

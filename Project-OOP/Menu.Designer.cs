@@ -34,6 +34,7 @@ namespace Project_OOP
             this.AddVehicle = new System.Windows.Forms.Button();
             this.Invoice = new System.Windows.Forms.Button();
             this.AddCustomer = new System.Windows.Forms.Button();
+            this.VehicleList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,18 +85,32 @@ namespace Project_OOP
             this.AddCustomer.UseVisualStyleBackColor = true;
             this.AddCustomer.Click += new System.EventHandler(this.AddCustomer_Click);
             // 
+            // VehicleList
+            // 
+            this.VehicleList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.VehicleList.ForeColor = System.Drawing.Color.Tomato;
+            this.VehicleList.Location = new System.Drawing.Point(406, 366);
+            this.VehicleList.Name = "VehicleList";
+            this.VehicleList.Size = new System.Drawing.Size(167, 53);
+            this.VehicleList.TabIndex = 4;
+            this.VehicleList.Text = "רשימת רכבים";
+            this.VehicleList.UseVisualStyleBackColor = true;
+            this.VehicleList.Click += new System.EventHandler(this.VehicleList_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 631);
+            this.Controls.Add(this.VehicleList);
             this.Controls.Add(this.AddCustomer);
             this.Controls.Add(this.Invoice);
             this.Controls.Add(this.AddVehicle);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -107,5 +122,6 @@ namespace Project_OOP
         private System.Windows.Forms.Button AddVehicle;
         private System.Windows.Forms.Button Invoice;
         private System.Windows.Forms.Button AddCustomer;
+        private System.Windows.Forms.Button VehicleList;
     }
 }

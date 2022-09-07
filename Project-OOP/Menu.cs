@@ -25,7 +25,9 @@ namespace Project_OOP
 
         private void Invoice_Click(object sender, EventArgs e)
         {
-            
+            Invoice invoiceform = new Invoice();
+            new Invoice().Show();
+            this.Hide();
         }
 
         private void AddCustomer_Click(object sender, EventArgs e)
@@ -36,6 +38,19 @@ namespace Project_OOP
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VehicleList_Click(object sender, EventArgs e)
+        {
+            VehicleList VehicleListrform = new VehicleList();
+            new VehicleList().Show();
+            this.Hide();
+
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
         {
 
         }
